@@ -1,11 +1,33 @@
 ---
-import Welcome from '../components/Welcome.astro';
+import Badge from '../components/Badge.astro';
 import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<h1>Hola Mundo!!</h1>
+<Layout title="My Portfolio">
+	<main>
+	<section class="w-full lg:w-[740px] mx-auto py-44">
+		<img class="rounded-full w-12 h-12 mb-4" 
+		src="/src/assets/yo.jpg"
+		alt="Foto de mi" 
+		/>
+		<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+			Hey, I'm Eric <a href="https://www.linkedin.com/in/eric-moya-carmona-011016251/" 
+			target="_blank"
+			rel="noopener"
+			class="flex justify-center items-center"
+			><Badge>Available for hire</Badge></div>
+		</h1>
+		<h2 class="text-2xl opacity-80 text-wrap">
+			<span class="text-yellow-200">Final-year student in Cross-Platform Application Development, specializing in Machine Learning.</span> 
+            Passionate about learning and building impactful solutions, 
+            <span class="text-blue-300">I’m eager to start my professional journey!</span>
+            <span class="text-red-300">Seville, Spain.</span>
+		</h2>
+
+	<ul></ul>
+	</section>
+	</main>
 </Layout>
