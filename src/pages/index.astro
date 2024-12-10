@@ -6,10 +6,13 @@ import Layout from '../layouts/Layout.astro';
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout title="My Portfolio">
+<Layout 
+	title="Portfolio of Eric - Innovative Developer in the Making"
+	description="Discover the portfolio of Eric, an innovative developer specializing in Machine Learning and Cross-Platform Application Development. Explore projects, skills, and connect with Eric for potential opportunities."
+	>
 	<main>
 	<section class="w-full lg:w-[740px] mx-auto py-44">
-		<img class="rounded-full w-12 h-12 mb-4" 
+		<img class="rounded-full w-10 h-12 mb-4" 
 		src="/src/assets/yo.jpg"
 		alt="Foto de mi" 
 		/>
@@ -27,7 +30,29 @@ import Layout from '../layouts/Layout.astro';
             <span class="text-red-300">Seville, Spain.</span>
 		</h2>
 
-	<ul></ul>
+	<ul class="flex gap-4 mt-8">
+		<li class="rounded-full shadow-lg border border-white border-opacity-30 p-2 bg-gray-800">
+			<a href="https://www.linkedin.com/in/eric-moya-carmona-011016251/" class="flex items-center gap-2"> 
+				<img src="/src/assets/linkedIn.svg" alt="Linkedin" class="w-6 h-6" />
+				Linkedin	
+			</a>
+		</li>
+		<li class="rounded-full shadow-lg border border-white border-opacity-30 p-2 bg-gray-800">
+			<a href="https://github.com/ShadeCoder7" class="flex items-center gap-2"> 
+				<img src="/src/assets/github.svg" alt="Github" class="w-6 h-6" />
+				Github
+			</a>
+		</li>
+		<li></li>
+		<li class="rounded-full shadow-lg border border-white border-opacity-30 p-2 bg-gray-800">
+			<a href="mailto:ericmoyacarmona7@gmail.com" class="flex items-center gap-2"> 
+				<img src="/src/assets/Mail.svg" alt="Email" class="w-6 h-6" />
+				ericmoyacarmona7@gmail.com
+			</a>
+		</li>
+		<li></li>
+
+	</ul>
 	</section>
 	</main>
 </Layout>
