@@ -1,0 +1,73 @@
+---
+import ExperienceItem from './ExperienceItem.astro';
+const EXPERIENCE = [
+
+{
+  title: "School Management System Development",
+  date: "Current",
+  description: "Designing and developing a comprehensive school management system, focusing on delivering user-friendly and efficient solutions.",
+  technologies: [
+    { icon: "/src/assets/icons/Figma.svg", name: "Figma" },
+    { icon: "/src/assets/icons/MySQL.svg", name: "MySQL" },
+    { icon: "/src/assets/icons/Django.svg", name: "Django" },
+    { icon: "/src/assets/icons/Python.svg", name: "Python" },
+    { icon: "/src/assets/icons/React.svg", name: "React" },
+    { icon: "/src/assets/icons/JavaScript.svg", name: "JavaScript" },
+    { icon: "/src/assets/icons/HTML5.svg", name: "HTML" },
+    { icon: "/src/assets/icons/CSS.svg", name: "CSS" }
+  ],
+  link: "#",
+},
+{
+  title: "Culinary Social Network Development",
+  date: "Current",
+  description: "Creating a culinary-focused social network with Java, MySQL, and React, combining innovative features for sharing recipes and building a vibrant community.",
+  technologies: [
+    { icon: "/src/assets/icons/Java.svg", name: "Java" },
+    { icon: "/src/assets/icons/MySQL.svg", name: "MySQL" },
+    { icon: "/src/assets/icons/JavaScript.svg", name: "JavaScript" },
+    { icon: "/src/assets/icons/HTML5.svg", name: "HTML" },
+    { icon: "/src/assets/icons/CSS.svg", name: "CSS" }
+  ],
+  link: "#",
+},
+{
+  title: "Portfolio Web Development",
+  date: "December 2024",
+  description: "Designed and developed my personal portfolio website to showcase my skills, projects, and professional experience. Implemented an interactive layout and responsive design to ensure an optimal user experience.",
+  
+  technologies: [
+    { icon: "/src/assets/icons/Astro.svg", name: "Astro" },
+    { icon: "/src/assets/icons/HTML5.svg", name: "HTML" },
+    { icon: "/src/assets/icons/CSS.svg", name: "CSS" },
+    { icon: "/src/assets/icons/Tailwind.svg", name: "TailwindCSS" }
+  ],
+  link: "#",
+},
+{
+  title: "Credit Card Fraud Detection Project",
+  date: "December 2024",
+  description: "Developed an AI-based solution to detect credit card fraud. Worked on data cleaning, statistical analysis, visualization, and machine learning model training, achieving high accuracy in fraud detection.",
+  technologies: [
+    { icon: "/src/assets/icons/Python.svg", name: "Python" },
+    { icon: "/src/assets/icons/Pandas.svg", name: "Pandas" },
+    { icon: "/src/assets/icons/Numpy.svg", name: "Numpy" },
+    { icon: "/src/assets/icons/Matplotlib.svg", name: "Matplotlib" },
+    { icon: "/src/assets/icons/Seaborn.svg", name: "Seaborn" },
+  ],
+  link: "#",
+}
+
+
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700">
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience} />
+            </li>
+        ))
+    }
+</ol>;

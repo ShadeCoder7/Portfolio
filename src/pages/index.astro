@@ -1,5 +1,7 @@
 ---
 import Badge from '../components/Badge.astro';
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
 import Layout from '../layouts/Layout.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -9,50 +11,58 @@ import Layout from '../layouts/Layout.astro';
 <Layout 
 	title="Portfolio of Eric - Innovative Developer in the Making"
 	description="Discover the portfolio of Eric, an innovative developer specializing in Machine Learning and Cross-Platform Application Development. Explore projects, skills, and connect with Eric for potential opportunities."
-	>
+>
 	<main>
-	<section class="w-full lg:w-[740px] mx-auto py-44">
-		<img class="rounded-full w-10 h-12 mb-4" 
-		src="/src/assets/yo.jpg"
-		alt="Foto de mi" 
-		/>
-		<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
-			Hey, I'm Eric <a href="https://www.linkedin.com/in/eric-moya-carmona-011016251/" 
-			target="_blank"
-			rel="noopener"
-			class="flex justify-center items-center"
-			><Badge>Available for hire</Badge></div>
-		</h1>
-		<h2 class="text-2xl opacity-80 text-wrap">
-			<span class="text-yellow-200">Final-year student in Cross-Platform Application Development, specializing in Machine Learning.</span> 
-            Passionate about learning and building impactful solutions, 
-            <span class="text-blue-300">I’m eager to start my professional journey!</span>
-            <span class="text-red-300">Seville, Spain.</span>
-		</h2>
+		<SectionContainer id="top" class="py-24 pb-20">
+			<img class="rounded-full size-12 mb-4" 
+				src="/src/assets/yo.jpg"
+				alt="Foto de mi" 
+			/>
+			<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-10">
+				Hey, I'm Eric 
+				<a href="https://www.linkedin.com/in/eric-moya-carmona-011016251/" 
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center"
+				>
+					<Badge>Available for hire</Badge>
+				</a>
+			</h1>
+			<h2 class="text-2xl opacity-80 text-wrap">
+				<span class="text-yellow-200">Final-year student in Cross-Platform Application Development, specializing in Machine Learning.</span> 
+				Passionate about learning and building impactful solutions, 
+				<span class="text-blue-300">I’m eager to start my professional journey!</span>
+				<span class="text-red-300">Seville, Spain.</span>
+			</h2>
 
-	<ul class="flex gap-4 mt-8">
-		<li class="rounded-full shadow-lg border border-white border-opacity-30 p-2 bg-gray-800">
-			<a href="https://www.linkedin.com/in/eric-moya-carmona-011016251/" class="flex items-center gap-2"> 
-				<img src="/src/assets/linkedIn.svg" alt="Linkedin" class="w-6 h-6" />
-				Linkedin	
-			</a>
-		</li>
-		<li class="rounded-full shadow-lg border border-white border-opacity-30 p-2 bg-gray-800">
-			<a href="https://github.com/ShadeCoder7" class="flex items-center gap-2"> 
-				<img src="/src/assets/github.svg" alt="Github" class="w-6 h-6" />
-				Github
-			</a>
-		</li>
-		<li></li>
-		<li class="rounded-full shadow-lg border border-white border-opacity-30 p-2 bg-gray-800">
-			<a href="mailto:ericmoyacarmona7@gmail.com" class="flex items-center gap-2"> 
-				<img src="/src/assets/Mail.svg" alt="Email" class="w-6 h-6" />
-				ericmoyacarmona7@gmail.com
-			</a>
-		</li>
-		<li></li>
+			<ul class="flex gap-4 mt-8">
+				<li class="rounded-full shadow-lg border border-white border-opacity-30 p-2 bg-gray-800 hover:bg-gray-700 mx-2">
+					<a href="https://www.linkedin.com/in/eric-moya-carmona-011016251/" class="flex items-center gap-2"> 
+						<img src="/src/assets/icons/linkedIn.svg" alt="Linkedin" class="size-6" />
+						Linkedin	
+					</a>
+				</li>
+				<li class="rounded-full shadow-lg border border-white border-opacity-30 p-2 bg-gray-800 hover:bg-gray-700 mx-2">
+					<a href="https://github.com/ShadeCoder7" class="flex items-center gap-2"> 
+						<img src="/src/assets/icons/github.svg" alt="Github" class="size-6" />
+						Github
+					</a>
+				</li>
+				<li class="rounded-full shadow-lg border border-white border-opacity-30 p-2 bg-gray-800 hover:bg-gray-700 mx-2">
+					<a href="mailto:ericmoyacarmona7@gmail.com" class="flex items-center gap-2"> 
+						<img src="/src/assets/icons/Mail.svg" alt="Email" class="size-6" />
+						ericmoyacarmona7@gmail.com
+					</a>
+				</li>
+			</ul>
+		</SectionContainer>
 
-	</ul>
-	</section>
+		<SectionContainer id="projects">
+			<h2 class="text-2xl font-semibold mb-6 flex items-center gap-3">
+                <img src="/src/assets/icons/Experience.svg" alt="Pick" class="size-7" />
+                Work Experience
+            </h2>
+            <Experience />
+		</SectionContainer>
 	</main>
 </Layout>
