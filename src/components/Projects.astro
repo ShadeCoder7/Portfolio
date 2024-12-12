@@ -1,0 +1,52 @@
+---
+const PROJECTS = [
+    {
+        title: "My Personal Portfolio - Designed and Built from Scratch",
+        description: 
+            "A personal portfolio designed and built from scratch to showcase my skills, experience, and projects. " +
+            "Focused on clean design, intuitive navigation, and a well-structured layout to deliver a seamless user experience.",
+        link: "http://localhost:4321/",
+        github: "https://github.com/ShadeCoder7/Portfolio",
+        image:"/Projects-photo/Project-1-photo.webp",
+        tags: ["Astro", "TailwindCSS", "HTML", "CSS", "JavaScript"]
+    },
+    {
+        title: "Project 2",
+        description: "This is a description for Project 2",
+        link: "",
+        github: "",
+        image:"https://via.placeholder.com/300x200",
+        tags: ["React", "TailwindCSS"]
+    },
+    {
+        title: "Project 3",
+        description: "This is a description for Project 3",
+        link: "",
+        github: "",
+        image:"https://via.placeholder.com/300x200",
+        tags: ["React", "TailwindCSS"]
+    }
+
+]
+---
+
+{
+    PROJECTS.map(({image, title, description, tags}) => (
+    <article class="mb-24">
+        <h3 class="text-2xl font-semibold text-yellow-200 text-opacity-80 mb-2">{title}</h3>
+        <p class="text-lg mb-4">{description}</p>
+        <ul class="flex list-none flex-wrap">
+            {tags.map(tag => (
+                <li class="flex items-center rounded-full border border-white border-opacity-30 p-1 mb-7 mr-2 bg-gray-800">
+                    <img src={`/src/assets/icons/${tag}.svg`} alt={`${tag} icon`} class="w-4 h-4 ml-1 mr-1 rounded-xl" />
+                    <span class="mr-1">{tag}</span>
+                </li>
+            ))}
+        </ul>
+        <img
+        class="rounded shadow-white/10 shadow-opacity-10 shadow-lg"
+        src={image} 
+        alt={`Captura de pantalla del proyecto ${image}` } />
+    </article>
+    ))
+}

@@ -1,0 +1,45 @@
+---
+const email = "ericmoyacarmona7@gmail.com";
+---
+
+<section id="contact" class="flex flex-col items-center mt-5 p-5 rounded-lg shadow-md">
+    <button id="emailButton" class="bg-blue-500 text-white border-none py-2 px-4 my-2 cursor-pointer rounded transition duration-300 ease-in-out hover:bg-blue-700">Send Email</button>
+    <div class="email-container flex items-center border border-gray-800 py-1 px-2 rounded my-2 bg-gray-500" style="background-color: rgba(128, 128, 128, 0.5);">
+        <p id="emailText" class="email-text m-0 text-base mr-2 text-white">{email}</p>
+        <button id="copyButton" class="bg-blue-500 text-white border-none py-1 px-2 cursor-pointer rounded transition duration-300 ease-in-out hover:bg-blue-700">Copy</button>
+    </div>
+</section>
+
+<script>
+    const email = "{email}";
+    document.addEventListener('DOMContentLoaded', () => {
+        const emailButton = document.getElementById('emailButton');
+        const copyButton = document.getElementById('copyButton');
+
+        if (emailButton) {
+            emailButton.addEventListener('click', () => {
+                window.location.href = `mailto:${email}`;
+            });
+        }
+
+        if (copyButton) {
+            copyButton.addEventListener('click', copyEmail);
+        }
+    });
+
+    function copyEmail() {
+        const emailText = document.getElementById('emailText');
+        const copyButton = document.getElementById('copyButton');
+        if (emailText && copyButton) {
+            const emailContent = emailText.textContent || '';
+            navigator.clipboard.writeText(emailContent).then(() => {
+                copyButton.textContent = 'Copied!';
+                copyButton.classList.add('text-green-500');
+                setTimeout(() => {
+                    copyButton.textContent = 'Copy';
+                    copyButton.classList.remove('text-green-500');
+                }, 2000); // 2000 ms = 2 seconds
+            });
+        }
+    }
+</script>
