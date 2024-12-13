@@ -38,7 +38,7 @@ Developed using **Visual Studio Code** as the primary code editor.
 
 ## 🌍 Live Demo
 
-Visit the live site here: [Eric's Portfolio](#) *(Replace "#" with your hosting link once available).*  
+Visit the live site here: [Eric's Portfolio](#). COMING SOON!  
 
 ---
 
