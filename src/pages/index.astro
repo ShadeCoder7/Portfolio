@@ -1,10 +1,10 @@
 ---
 import Badge from '../components/Badge.astro';
-import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro';
 import Layout from '../layouts/Layout.astro';
 import Contact from '../components/Contact.astro';
 import Projects from '../components/Projects.astro';
+import About from '../components/About.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -17,7 +17,7 @@ import Projects from '../components/Projects.astro';
 	<main class="px-4">
 		<SectionContainer id="top" class="py-24 pb-20">
 			<img class="rounded size-12 mb-4" 
-				src="/src/assets/icons/Logo.jpg"
+				src="/src/assets/icons/Logo.png"
 				alt="Foto Logo" 
 			/>
 			<h1 class="text-white text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
@@ -59,7 +59,7 @@ import Projects from '../components/Projects.astro';
 			</ul>
 		</SectionContainer>
 
-		<SectionContainer id="Work-Experience" class="mb-32">
+		<SectionContainer id="Work-Experience" class="mb-20 mt-20">
 			<h2 class="text-2xl font-semibold mb-7 flex items-center gap-3 mt-5">
 				<img src="/src/assets/icons/Experience.svg" alt="Pick" class="size-7" />
 				Work Experience
@@ -79,18 +79,15 @@ import Projects from '../components/Projects.astro';
 			<Projects />
 		</SectionContainer>
 
-		<SectionContainer id="about" class="mt-32">
+		<SectionContainer id="about" class="mt-20">
 			<h2 class="text-2xl font-semibold mb-6 flex items-center gap-3 mt-5">
 				<img src="/src/assets/icons/About.svg" alt="Pick" class="size-7" />
 				About
 			</h2>
-			<div class="bg-transparent text-white rounded-lg shadow-2xl p-8 mt-8 text-center border border-transparent">
-				<h2 class="text-3xl text-yellow-200 opacity-80 font-bold mb-4">Coming Soon...</h2>
-				<p class="text-xl opacity-60">Stay tuned for more updates!</p>
-			</div>
+			<About />
 		</SectionContainer>
 
-		<SectionContainer id="contact" class="mt-32">
+		<SectionContainer id="contact" class="mt-20">
 			<h2 class="text-2xl font-semibold mb-6 flex items-center gap-3 mt-5">
 				<img src="/src/assets/icons/Contact.svg" alt="Pick" class="size-7" />
 				Contact

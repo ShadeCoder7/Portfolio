@@ -1,0 +1,45 @@
+---
+const softSkills = ["Comunicación", "Trabajo en equipo", "Adaptabilidad", "Resolución de problemas", "Creatividad"];
+const hardSkills = [
+    { name: "Java", icon: "/src/assets/icons/Java.svg" },
+    { name: "SQL", icon: "/src/assets/icons/MySQL.svg" },
+    { name: "Astro", icon: "/src/assets/icons/Astro.svg" },
+    { name: "TailwindCSS", icon: "/src/assets/icons/TailwindCSS.svg" },
+    { name: "Python", icon: "/src/assets/icons/Python.svg" },
+    { name: "JavaScript", icon: "/src/assets/icons/Javascript.svg" },
+    { name: "Django", icon: "/src/assets/icons/Django.svg" },
+    { name: "React", icon: "/src/assets/icons/React.svg" }
+];
+---
+
+<section class="text-xl">
+    <p class="mb-10">
+        Hello, I'm <strong class="text-blue-200">Eric</strong>. I am a passionate <strong class="text-blue-200">student</strong> with experience in creating <strong class="text-blue-200">modern</strong> and <strong class="text-blue-200">efficient</strong> web applications. I love learning new <strong class="text-blue-200">technologies</strong> and continuously improving my skills through projects. Although I am currently studying officially, I also enjoy learning in a <strong class="text-blue-200">self-taught</strong> manner to complement my knowledge. In my free time, I enjoy working on personal programming projects, playing <strong class="text-blue-200">video games</strong>, and going to the <strong class="text-blue-200">cinema</strong>.
+    </p>
+    <p class="text-xl mb-6">
+        Here is a summary of my <strong class="text-blue-200">soft</strong> and <strong class="text-blue-200">technical</strong> skills. These skills allow me to adapt and perform efficiently in various projects and work teams.
+    </p>
+    
+    <div class="flex justify-between mt-10">
+        <div class="w-1/2 pr-2">
+            <h2 class="text-xl font-bold mb-2 text-yellow-300 border-b-2 border-blue-300">Habilidades Blandas</h2>
+            <ul class="list-disc list-inside text-base">
+                {softSkills.map(skill => (
+                    <li class="mb-2 p-1 border border-gray-800 bg-gray-800 rounded-full max-w-xs">{skill}</li>
+                ))}
+            </ul>
+        </div>
+        
+        <div class="w-1/2 pl-2">
+            <h2 class="text-xl font-bold mb-2 text-yellow-300 border-b-2 border-blue-300">Habilidades Técnicas</h2>
+            <ul class="list-disc list-inside text-base">
+            {hardSkills.map(skill => (
+                <li class="flex items-center mb-2 p-1 border border-gray-800 bg-gray-800 rounded-full max-w-xs max-w-[90%]">
+                <img src={skill.icon} alt={skill.name} class="w-8 h-8 mr-2 rounded-full" />
+                {skill.name}
+                </li>
+            ))}
+            </ul>
+        </div>
+    </div>
+</section>

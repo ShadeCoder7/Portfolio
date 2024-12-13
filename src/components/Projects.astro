@@ -11,42 +11,70 @@ const PROJECTS = [
         tags: ["Astro", "TailwindCSS", "HTML", "CSS", "JavaScript"]
     },
     {
-        title: "Project 2",
-        description: "This is a description for Project 2",
+        title: "Credit Card Fraud Detection - Leveraging Machine Learning for Enhanced Security",
+        description: 
+        "Developed an AI-powered solution for credit card fraud detection. " 
+        + "Focused on data cleaning, statistical analysis, visualization, and training machine learning models, achieving high accuracy in identifying fraudulent transactions.",
         link: "",
-        github: "",
-        image:"https://via.placeholder.com/300x200",
-        tags: ["React", "TailwindCSS"]
+        github: "https://github.com/ShadeCoder7/credit-card-fraud-detection",
+        image:"/Projects-photo/Project-2-photo.webp",
+        tags: ["Python", "Pandas", "Numpy", "Matplotlib", "Seaborn"]
     },
     {
-        title: "Project 3",
-        description: "This is a description for Project 3",
+        title: "School Management System - Enhancing Educational Processes",
+        description: 
+        "Designing and developing a comprehensive school management system to enhance educational processes. " 
+        + "Focused on delivering user-friendly and efficient solutions for managing school activities, student records, and administrative tasks.",
         link: "",
         github: "",
-        image:"https://via.placeholder.com/300x200",
-        tags: ["React", "TailwindCSS"]
+        image: "",
+        placeholder: "Estamos trabajando en ello. Próximamente habrá imágenes disponibles.",
+        tags: ["Figma", "MySQL", "Django", "Python", "React", "JavaScript", "HTML", "CSS"]
+    },
+    {
+        title: "Culinary Social Network - Building a Community for Food Enthusiasts",
+        description: 
+        "Creating a culinary-focused social network to build a vibrant community for sharing recipes and culinary experiences. " 
+        + "Focused on fostering connections, sharing knowledge, and creating engaging culinary content.",
+        link: "",
+        github: "",
+        image:"",
+        tags: ["Java", "MySQL", "JavaScript", "HTML", "CSS", "Postman"]
     }
-
 ]
 ---
 
 {
-    PROJECTS.map(({image, title, description, tags}) => (
-    <article class="mb-24">
+    PROJECTS.map(({image, title, description, tags, github}) => (
+    <article class="mb-20">
         <h3 class="text-2xl font-semibold text-yellow-200 text-opacity-80 mb-2">{title}</h3>
         <p class="text-lg mb-4">{description}</p>
-        <ul class="flex list-none flex-wrap">
+        <ul class="flex list-none flex-wrap mb-4">
             {tags.map(tag => (
-                <li class="flex items-center rounded-full border border-white border-opacity-30 p-1 mb-7 mr-2 bg-gray-800">
+                <li class="flex items-center rounded-full border border-white border-opacity-30 p-1 mr-2 bg-gray-800 mb-2">
                     <img src={`/src/assets/icons/${tag}.svg`} alt={`${tag} icon`} class="w-4 h-4 ml-1 mr-1 rounded-xl" />
                     <span class="mr-1">{tag}</span>
                 </li>
             ))}
         </ul>
-        <img
-        class="rounded shadow-white/10 shadow-opacity-10 shadow-lg"
-        src={image} 
-        alt={`Captura de pantalla del proyecto ${image}` } />
+        
+        {image ? (
+            <img
+            class="rounded shadow-white/10 shadow-opacity-10 shadow-lg"
+            src={image} 
+            alt={`Screenshot of the project ${title}`} 
+            />
+        ) : (
+            <div class="bg-transparent text-white rounded-lg shadow-2xl p-8 mt-8 text-center border border-transparent">
+                <h2 class="text-xl text-yellow-200 opacity-80 font-bold mb-4">Photos coming soon...</h2>
+                <p class="text-lg opacity-60">We are currently working on this project!</p>
+            </div>
+        )}
+        {github && (
+            <a href={github} target="_blank" class="inline-block border border-white border-opacity-30 mt-7 mb-4 px-4 py-2 bg-gray-800 text-white rounded-full hover:bg-blue-700 transition">
+                View on GitHub
+            </a>
+        )}
     </article>
     ))
 }
