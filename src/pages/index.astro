@@ -14,44 +14,42 @@ import About from '../components/About.astro';
 	title="Portfolio of Eric - Innovative Developer in the Making"
 	description="Discover the portfolio of Eric, an innovative developer specializing in Machine Learning and Cross-Platform Application Development. Explore projects, skills, and connect with Eric for potential opportunities."
 >
-	<main class="px-4">
-		<SectionContainer id="top" class="py-24 pb-20">
-			<img class="rounded-full shadow-xl ml-[25rem] mr-15 mb-6 lg:w-44 lg:h-44" 
-				src="/assets/icons/Logo.png"
-				alt="Placeholder for personal photo" 
-			/>
-			<h1 class="text-white text-3xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
-				Hey, I'm Eric 
-				<a href="https://www.linkedin.com/in/eric-moya-carmona-011016251/" 
-					target="_blank"
-					rel="noopener"
-					class="flex justify-center items-center"
-				>
-				</a>
-			</h1>
-			
-			<h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">
-				<span class="text-yellow-200">Final-year student in Cross-Platform Application Development, specializing in Machine Learning.</span> 
-				Passionate about learning and building impactful solutions, 
-				<span class="text-blue-300">I’m eager to start my professional journey!</span>
-				<span class="text-red-300">Seville, Spain.</span>
-			</h2>
+	<main class="flex flex-col items-center justify-center w-full">
+		<SectionContainer id="top" class="py-24 pb-24">
+			<div class="text-center">
+				<img class="rounded-full mb-11 lg:w-44 lg:h-44 mx-auto border-2 border-gray-400 shadow-lg" 
+					src="/assets/icons/Logo.png"
+					alt="Professional photo of Eric" 
+				/>
+				<h1 class="text-white text-3xl lg:text-5xl font-bold pb-6 lg:pb-10 animate-bounce">
+					<span class="bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
+						Hello, I'm Eric
+					</span>
+				</h1>
+				
+				<h2 class="text-xl lg:text-2xl opacity-80 max-w-[700px] mx-auto">
+					<span class="text-blue-300 font-semibold">Final-year student</span> in Cross-Platform Application Development, specializing in <span class="text-blue-300 font-semibold">Machine Learning</span>. 
+					Passionate about learning and building impactful solutions, 
+					<span class="text-blue-300 font-semibold">I’m eager to start my professional journey!</span>
+					<span class="text-blue-300 font-semibold">Seville, Spain.</span>
+				</h2>
+			</div>
 
-			<ul class="flex gap-4 mt-8 flex-wrap">
-				<li class="rounded-full shadow-lg border border-white border-opacity-30 p-2 bg-gray-800 hover:bg-gray-700 mx-2">
-					<a href="https://www.linkedin.com/in/eric-moya-carmona-011016251/" class="flex items-center gap-2"> 
+			<ul class="flex gap-4 mt-8 flex-wrap justify-center">
+				<li class="rounded-full shadow-lg border border-white border-opacity-30 p-2 bg-gray-800 hover:bg-gray-700 mx-2 transition-transform transform hover:scale-105">
+					<a target="_blank" href="https://www.linkedin.com/in/eric-moya-carmona-011016251/" class="flex items-center gap-2 text-white hover:text-blue-300 transition-colors"> 
 						<img src="/assets/icons/LinkedIn.svg" alt="Linkedin" class="size-4 md:size-6" />
-						Linkedin	
+						LinkedIn	
 					</a>
 				</li>
-				<li class="rounded-full shadow-lg border border-white border-opacity-30 p-2 bg-gray-800 hover:bg-gray-700 mx-2">
-					<a href="https://github.com/ShadeCoder7" class="flex items-center gap-2"> 
+				<li class="rounded-full shadow-lg border border-white border-opacity-30 p-2 bg-gray-800 hover:bg-gray-700 mx-2 transition-transform transform hover:scale-105">
+					<a target="_blank" href="https://github.com/ShadeCoder7" class="flex items-center gap-2 text-white hover:text-blue-300 transition-colors"> 
 						<img src="/assets/icons/GitHub.svg" alt="Github" class="size-4 md:size-6" />
-						Github
+						GitHub
 					</a>
 				</li>
-				<li class="rounded-full shadow-lg border border-white border-opacity-30 p-2 bg-gray-800 hover:bg-gray-700 mx-2">
-					<a href="mailto:ericmoyacarmona7@gmail.com" class="flex items-center gap-2"> 
+				<li class="rounded-full shadow-lg border border-white border-opacity-30 p-2 bg-gray-800 hover:bg-gray-700 mx-2 transition-transform transform hover:scale-105">
+					<a  target="_blank" href="mailto:ericmoyacarmona7@gmail.com" class="flex items-center gap-2 text-white hover:text-blue-300 transition-colors"> 
 						<img src="/assets/icons/Mail.svg" alt="Email" class="size-4 md:size-6" />
 						Mail
 					</a>
@@ -59,35 +57,49 @@ import About from '../components/About.astro';
 			</ul>
 		</SectionContainer>
 
-		<SectionContainer id="Work-Experience" class="mb-20 mt-20">
+		<SectionContainer id="Work-Experience" class="mt-20">
 			<h2 class="text-2xl font-semibold mb-7 flex items-center gap-3 mt-5">
-				<img src="/assets/icons/Experience.svg" alt="Pick" class="size-7" />
+				<img src="/assets/icons/Experience.svg" alt="Pick" class="size-7 animate-bounce" />
 				Work Experience
 			</h2>
 			
 			<div class="bg-transparent text-white rounded-lg shadow-2xl p-8 mt-8 text-center border border-transparent">
-				<h2 class="text-3xl text-yellow-200 opacity-80 font-bold mb-4">Coming Soon...</h2>
+				<h2 class="text-3xl text-yellow-300 opacity-80 font-bold mb-4 animate-pulse">Coming Soon...</h2>
 				<p class="text-xl opacity-60">Stay tuned for more updates!</p>
 			</div>
 		</SectionContainer>
 
-		<SectionContainer id="projects">
+		<SectionContainer id="projects" class="mt-20">
 			<h2 class="text-2xl font-semibold mb-6 flex items-center gap-3 mt-5">
-				<img src="/assets/icons/Project.svg" alt="Pick" class="size-7" />
+				<img src="/assets/icons/Project.svg" alt="Pick" class="size-7 animate-bounce" />
 				Projects
 			</h2>
 			<Projects />
+			<div class="text-center mt-8">
+				<button class="bg-gradient-to-r from-blue-500 to-green-500 text-white px-6 py-2 rounded-full shadow-lg hover:from-green-500 hover:to-blue-500 transition-transform transform hover:scale-105 border border-gray-300" id="showModalButton">
+					See More Projects
+				</button>
+
+				<div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden transition-opacity duration-300">
+					<div class="bg-white rounded-lg shadow-lg p-8 max-w-md text-center transform transition-transform duration-300 scale-95">
+						<h2 class="text-3xl font-bold mb-4 text-gray-800">More Projects Coming Soon!</h2>
+						<p class="text-gray-600 mb-6">Stay tuned for more updates on exciting projects that I'm working on. Thank you for your interest!</p>
+						<button class="bg-gradient-to-r from-blue-500 to-green-500 text-white px-6 py-2 rounded-full shadow-lg hover:from-green-500 hover:to-blue-500 transition-transform transform hover:scale-105" id="closeModalButton">Close</button>
+					</div>
+				</div>
+			</div>
+			</div>
 		</SectionContainer>
 
 		<SectionContainer id="about" class="mt-20">
 			<h2 class="text-2xl font-semibold mb-6 flex items-center gap-3 mt-5">
-				<img src="/assets/icons/About.svg" alt="Pick" class="size-7" />
+				<img src="/assets/icons/About.svg" alt="Pick" class="size-7 animate-bounce" />
 				About
 			</h2>
 			<About />
 		</SectionContainer>
 
-		<SectionContainer id="contact" class="mt-20">
+		<SectionContainer id="contact" class="mt-20 mb-20">
 			<h2 class="text-2xl font-semibold mb-6 flex items-center gap-3 mt-5">
 				<img src="/assets/icons/Contact.svg" alt="Pick" class="size-7" />
 				Contact
@@ -97,5 +109,27 @@ import About from '../components/About.astro';
 
 		
 
+	</main>
+		<script>
+			const showModalButton = document.getElementById('showModalButton');
+			if (showModalButton) {
+				showModalButton.addEventListener('click', function() {
+					const modal = document.getElementById('modal');
+					if (modal) {
+						modal.classList.remove('hidden');
+					}
+				});
+			}
+
+			const closeModalButton = document.getElementById('closeModalButton');
+			if (closeModalButton) {
+				closeModalButton.addEventListener('click', function() {
+					const modal = document.getElementById('modal');
+					if (modal) {
+						modal.classList.add('hidden');
+					}
+				});
+			}
+		</script>
 	</main>
 </Layout>

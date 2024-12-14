@@ -72,8 +72,11 @@ const PROJECTS = [
             </div>
         )}
         {github && (
-            <a href={github} target="_blank" class="inline-block border border-white border-opacity-30 mt-7 mb-4 px-4 py-2 bg-gray-800 text-white rounded-full hover:bg-blue-700 transition">
-                View on GitHub
+            <a href={github} target="_blank" class="inline-block border border-gray-600 mt-7 mb-4 px-4 py-2 bg-gradient-to-r from-purple-700 to-gray-900 text-white rounded-full hover:from-purple-900 hover:to-gray-700 transition-transform transform hover:rotate-2 shadow-lg">
+            <span class="flex items-center">
+            <img src="/assets/icons/GitHub.svg" alt="GitHub icon" class="w-5 h-5 mr-2" />
+            View on GitHub
+            </span>
             </a>
         )}
     </article>

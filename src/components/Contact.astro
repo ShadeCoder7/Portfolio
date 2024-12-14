@@ -4,10 +4,10 @@ const email = "ericmoyacarmona7@gmail.com";
 
 <section id="contact" class="flex flex-col items-center mt-5 p-5 rounded-lg shadow-md">
     <h2 class="text-center text-lg text-yellow-300 mb-4 text-2xl font-bold">Got a vision? Let’s turn it into reality—reach out and let’s make it happen!</h2>
-    <button id="emailButton" class="bg-blue-500 text-white border border-white border-opacity-30 py-1 px-4 my-2 cursor-pointer rounded transition duration-300 ease-in-out hover:bg-blue-700">Send Email</button>
-    <div class="email-container flex items-center border border-white border-opacity-30 px-5 py-2 rounded my-2 bg-gray-500" style="background-color: rgba(128, 128, 128, 0.5);">
+    <button id="emailButton" class="bg-blue-500 text-white border border-white border-opacity-30 py-1 px-4 my-2 cursor-pointer rounded-full transition duration-300 ease-in-out hover:bg-blue-900">Send Email</button>
+    <div class="email-container flex items-center border border-white border-opacity-30 px-5 py-2 rounded-full my-2 bg-gray-500" style="background-color: rgba(128, 128, 128, 0.5);">
         <p id="emailText" class="email-text m-0 text-base  mr-2 text-white">{email}</p>
-        <button id="copyButton" class="bg-blue-500 text-white border border-white border-opacity-30 py-1 px-2 cursor-pointer rounded transition duration-300 ease-in-out hover:bg-blue-700">Copy</button>
+        <button id="copyButton" class="bg-blue-500 text-white border border-white border-opacity-30 py-1 px-2 cursor-pointer rounded-full transition duration-300 ease-in-out hover:bg-blue-700"><span id="arrow">&larr;</span> Copy</button>
     </div>
 </section>
 
@@ -16,6 +16,7 @@ const email = "ericmoyacarmona7@gmail.com";
     document.addEventListener('DOMContentLoaded', () => {
         const emailButton = document.getElementById('emailButton');
         const copyButton = document.getElementById('copyButton');
+        const arrow = document.getElementById('arrow');
 
         if (emailButton) {
             emailButton.addEventListener('click', () => {
@@ -31,6 +32,7 @@ const email = "ericmoyacarmona7@gmail.com";
     function copyEmail() {
         const emailText = document.getElementById('emailText');
         const copyButton = document.getElementById('copyButton');
+        const arrow = document.getElementById('arrow');
         if (emailText && copyButton) {
             const emailContent = emailText.textContent || '';
             navigator.clipboard.writeText(emailContent).then(() => {
@@ -41,7 +43,7 @@ const email = "ericmoyacarmona7@gmail.com";
                 tickMark.classList.add('ml-2');
                 copyButton.appendChild(tickMark);
                 setTimeout(() => {
-                    copyButton.textContent = 'Copy';
+                    copyButton.innerHTML = '<span id="arrow">&larr;</span> Copy';
                     copyButton.classList.remove('bg-green-500');
                 }, 2000); // 2000 ms = 2 seconds
             });

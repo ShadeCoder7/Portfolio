@@ -1,9 +1,86 @@
-<header class="flex justify-center items-center py-7 w-full xl:w-[1120px] mx-auto">
-    <nav class="flex flex-row gap-11 opacity-70">
-        <a href="#top" class="hover:text-blue-500 transition-colors">Home</a>
-        <a href="#Work-Experience" class="hover:text-blue-500 transition-colors">Work Experience</a>
-        <a href="#projects" class="hover:text-blue-500 transition-colors">Projects</a>
-        <a href="#about" class="hover:text-blue-500 transition-colors">About</a>
-        <a href="#contact" class="hover:text-blue-500 transition-colors">Contact</a>
+<header id="main-header" class="sticky top-2 z-50 bg-gray-800 bg-opacity-95 rounded-full border border-1 border-gray-400 shadow-md flex justify-center items-center py-1 w-full xl:w-[1120px] mx-auto px-3 sm:px-8 md:px-16 lg:px-24 transition-all duration-300">
+    <nav class="flex flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-10 xl:gap-11 opacity-70 justify-center flex-wrap">
+        <a href="#top" class="nav-link hover:text-blue-700 transition-colors relative px-4 py-2 border-2 border-transparent rounded-full">Home</a>
+        <a href="#Work-Experience" class="nav-link hover:text-blue-700 transition-colors relative px-4 py-2 border-2 border-transparent rounded-full whitespace-nowrap">Work Experience</a>
+        <a href="#projects" class="nav-link hover:text-blue-700 transition-colors relative px-4 py-2 border-2 border-transparent rounded-full">Projects</a>
+        <a href="#about" class="nav-link hover:text-blue-700 transition-colors relative px-4 py-2 border-2 border-transparent rounded-full">About</a>
+        <a href="#contact" class="nav-link hover:text-blue-700 transition-colors relative px-4 py-2 border-2 border-transparent rounded-full">Contact</a>
     </nav>
 </header>
+<style>
+    a::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(77, 76, 76, 0.151);
+        border-radius: 9999px; /* Fully rounded corners */
+        z-index: 0;
+        transition: transform 0.30s ease-out, background-color 0.30s ease-out;
+        transform: scaleX(0);
+        transform-origin: center; /* Change origin to center */
+    }
+
+    a:hover::before {
+        transform: scaleX(1);
+    }
+
+    a:hover {
+        border-color: #3b82f6; /* Tailwind CSS blue-500 */
+        color: #3b82f6;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    }
+
+    .sticky-header {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    #main-header {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    #main-header.hidden-header {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const header = document.getElementById('main-header');
+        let lastScrollY = window.scrollY;
+
+        window.addEventListener('scroll', () => {
+            if (header) {
+                if (window.scrollY > lastScrollY) {
+                    header.classList.add('hidden-header');
+                } else {
+                    header.classList.remove('hidden-header');
+                }
+                lastScrollY = window.scrollY;
+            }
+        });
+
+        document.querySelectorAll('.nav-link').forEach((link) => {
+            link.addEventListener('click', function(this: HTMLAnchorElement, event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href')?.substring(1);
+                if (!targetId) return;
+                const targetElement = document.getElementById(targetId);
+                if (!targetElement) return;
+                if (!header) return;
+                const headerOffset = header.offsetHeight;
+                const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+                const offsetPosition = elementPosition - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'auto' // Change smooth scrolling to instant scrolling
+                });
+            });
+        });
+    });
+</script>
