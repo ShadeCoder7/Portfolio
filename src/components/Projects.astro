@@ -15,7 +15,7 @@ const PROJECTS = [
         description: 
             "A personal portfolio designed and built from scratch to showcase my skills, experience, and projects. " +
             "Focused on clean design, intuitive navigation, and a well-structured layout to deliver a seamless user experience.",
-        link: "http://localhost:4321/",
+        link: "https://ericm-dev-portfolio.netlify.app",
         github: "https://github.com/ShadeCoder7/Portfolio",
         image:"/Projects-photo/Project-1-photo.webp",
         tags: ["Astro", "TailwindCSS", "HTML", "CSS", "JavaScript"]
@@ -45,7 +45,7 @@ const PROJECTS = [
 ---
 
 {
-    PROJECTS.map(({image, title, description, tags, github}) => (
+    PROJECTS.map(({image, title, description, tags, github, link}) => (
     <article class="mb-20">
         <h3 class="text-2xl font-semibold text-yellow-200 text-opacity-80 mb-2">{title}</h3>
         <p class="text-lg mb-4">{description}</p>
@@ -60,22 +60,30 @@ const PROJECTS = [
         
         {image ? (
             <img
-            class="rounded shadow-white/10 shadow-opacity-10 shadow-lg"
+            class="rounded shadow-white/10 shadow-opacity-10 shadow-lg transition-transform transform hover:scale-105"
             src={image} 
             alt={`Screenshot of the project ${title}`} 
             onerror="this.style.display = 'none'"
             />
         ) : (
             <div class="bg-transparent text-white rounded-lg shadow-2xl p-8 mt-8 text-center border border-transparent">
-                <h2 class="text-xl text-yellow-200 opacity-80 font-bold mb-4">Photos coming soon...</h2>
-                <p class="text-lg opacity-60">We are currently working on this project!</p>
+            <h2 class="text-xl text-yellow-200 opacity-80 font-bold mb-4">Photos coming soon...</h2>
+            <p class="text-lg opacity-60">We are currently working on this project!</p>
             </div>
         )}
         {github && (
             <a href={github} target="_blank" class="inline-block border border-gray-600 mt-7 mb-4 px-4 py-2 bg-gradient-to-r from-purple-700 to-gray-900 text-white rounded-full hover:from-purple-900 hover:to-gray-700 transition-transform transform hover:rotate-2 shadow-lg">
             <span class="flex items-center">
-            <img src="/assets/icons/GitHub.svg" alt="GitHub icon" class="w-5 h-5 mr-2" />
-            View on GitHub
+                <img src="/assets/icons/GitHub.svg" alt="GitHub icon" class="w-5 h-5 mr-2" />
+                View on GitHub
+            </span>
+            </a>
+        )}
+        {link && (
+            <a href={link} target="_blank" class="inline-block border border-gray-600 mt-7 mb-4 px-4 py-2 ml-4 bg-gradient-to-r from-green-700 to-gray-900 text-white rounded-full hover:from-green-900 hover:to-gray-700 transition-transform transform hover:rotate-2 shadow-lg">
+            <span class="flex items-center">
+                <img src="/assets/icons/Link.svg" alt="Link icon" class="w-5 h-5 mr-2" />
+                Visit Project
             </span>
             </a>
         )}

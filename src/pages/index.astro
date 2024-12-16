@@ -16,7 +16,7 @@ import About from '../components/About.astro';
 	<main class="flex flex-col items-center justify-center w-full">
 		<SectionContainer id="top" class="py-24 pb-24">
 			<div class="text-center">
-				<img class="rounded-full mb-11 lg:w-44 lg:h-44 mx-auto border-2 border-gray-400 shadow-lg" 
+				<img class="rounded-full mb-11 w-24 h-24 lg:w-44 lg:h-44 mx-auto border-2 border-gray-400 shadow-lg" 
 					src="/assets/icons/Logo.png"
 					alt="Professional photo of Eric" 
 				/>
@@ -75,10 +75,9 @@ import About from '../components/About.astro';
 			</h2>
 			<Projects />
 			<div class="text-center mt-8">
-				<button class="bg-gradient-to-r from-blue-500 to-green-500 text-white px-6 py-2 rounded-full shadow-lg hover:from-green-500 hover:to-blue-500 transition-transform transform hover:scale-105 border border-gray-300" id="showModalButton">
+				<button class="bg-gradient-to-r from-blue-600 to-green-600 text-white px-8 py-3 rounded-full shadow-lg hover:from-green-600 hover:to-blue-600 transition-transform transform hover:scale-105 border border-gray-400 font-semibold" id="showModalButton">
 					See More Projects
 				</button>
-
 				<div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden transition-opacity duration-300">
 					<div class="bg-white rounded-lg shadow-lg p-8 max-w-md text-center transform transition-transform duration-300 scale-95">
 						<h2 class="text-3xl font-bold mb-4 text-gray-800">More Projects Coming Soon!</h2>
