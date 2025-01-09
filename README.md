@@ -50,6 +50,8 @@ Visit the live site here: [Eric's Portfolio](https://ericm-dev-portfolio.netlify
    - A collaborative project using **Django** for backend and **React** for frontend, with designs made in **Figma**.  
 2. **Culinary Social Network**  
    - A recipe-focused social platform built with **Java** for the backend and SQL databases for storage.  
+3. **Academy Management Application**  
+   - A project aimed at managing student registrations in a database, focused on the **database management** for student enrollment.
 
 ---
 
