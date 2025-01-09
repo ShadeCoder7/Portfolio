@@ -59,6 +59,7 @@ I am currently working on:
 - Completing the **Work Experience** section.  
 - Adding screenshots for the **Projects** section.  
 - Enhancing accessibility and refining details across the site.
+- Implementing a **day mode**, as the site currently only supports night mode.
 
 ---
 
