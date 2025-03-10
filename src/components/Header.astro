@@ -1,5 +1,6 @@
 <header id="main-header" class="fixed top-0 left-0 w-full z-50 flex flex-col justify-center items-center py-1 transition-all duration-300 shadow-lg backdrop-blur-md">
     <nav class="flex flex-row gap-2 sm:gap-3 md:gap-8 lg:gap-10 xl:gap-11 opacity-70 justify-center flex-wrap">
+        <!-- Enlaces de navegación -->
         <a href="#top" class="nav-link hover:text-blue-700 transition-colors relative px-2 py-2 border-2 border-transparent rounded-full flex items-center gap-2">
             <img src="/assets/icons/Home.svg" alt="Home Icon"/>
         </a>
@@ -18,8 +19,18 @@
         <a href="#contact" class="nav-link hover:text-blue-700 transition-colors relative px-2 py-2 border-2 border-transparent rounded-full flex items-center gap-2">
             <img src="/assets/icons/ContactH.svg" alt="Contact Icon"/>
         </a>
+        <!-- 
+        <div class="language-switcher ml-5">
+            <label for="language-selector" class="sr-only">Select Language</label>
+            <select id="language-selector" onchange="changeLanguage(event)" class="text-violet-400 bg-transparent border-2 border-violet-400 rounded-lg p-2">
+                <option value="en" selected>English</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+            </select>
+        </div>-->
     </nav>
 </header>
+
 <style>
     a::before {
         content: '';
@@ -62,8 +73,9 @@
         opacity: 0;
     }
 </style>
+
 <script>
-const header = document.getElementById('main-header');
+const header = document.getElementById('main-header')!;
 
 document.querySelectorAll('.nav-link').forEach((link) => {
     link.addEventListener('click', function(this: HTMLAnchorElement, event) {
@@ -84,4 +96,51 @@ document.querySelectorAll('.nav-link').forEach((link) => {
         });
     });
 });
+ /*
+// Datos del idioma
+const languageData = {
+    en: {
+        welcome: "Hello, I'm Eric.",
+        softSkillsTitle: "Final-year student in Cross-Platform Application Development, specializing in Machine Learning. Passionate about learning and building impactful solutions. Seville, Spain."
+    },
+    es: {
+        welcome: "Hola, soy Eric.",
+        softSkillsTitle: "Estudiante de último año en Desarrollo de Aplicaciones Multiplataforma, especializado en Aprendizaje Automático. Apasionado por aprender y construir soluciones impactantes. Sevilla, España."
+    },
+    fr: {
+        welcome: "Bonjour, je suis Eric.",
+        softSkillsTitle: "Étudiant en dernière année en Développement d'Applications Multiplateformes, spécialisé en Apprentissage Automatique. Passionné par l'apprentissage et la construction de solutions impactantes. Séville, Espagne."
+    }
+}
+
+// Función para cambiar el idioma
+function changeLanguage(event: Event) {
+    const target = event.target as HTMLSelectElement;
+    const selectedLanguage = target.value;
+    localStorage.setItem('language', selectedLanguage); // Guardamos la preferencia en localStorage
+    updateLanguage(selectedLanguage as 'en' | 'es' | 'fr'); // Llamamos a la función para cambiar el idioma
+}
+
+// Función para actualizar los textos en la página según el idioma seleccionado
+function updateLanguage(language: keyof typeof languageData) {
+    document.getElementById('welcome-text')!.innerHTML = languageData[language].welcome;
+    document.getElementById('soft-skills-heading')!.innerHTML = languageData[language].softSkillsTitle;
+    // Añadir más líneas aquí si tienes más textos que quieras traducir
+}
+
+// Al cargar la página, configuramos el idioma
+window.onload = () => {
+    const storedLanguage = localStorage.getItem('language') || 'en'; // Obtenemos el idioma guardado o 'en' por defecto
+    const languageSelector = document.getElementById('language-selector') as HTMLSelectElement;
+    
+    // Establecemos el idioma en el selector
+    languageSelector.value = storedLanguage as 'en' | 'es' | 'fr';
+
+    // Actualizamos el idioma de la página según el idioma almacenado
+    updateLanguage(storedLanguage as 'en' | 'es' | 'fr');
+}
+
+// Evento para manejar el cambio de idioma
+document.getElementById('language-selector')?.addEventListener('change', changeLanguage);
+*/
 </script>
