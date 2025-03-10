@@ -6,22 +6,40 @@ const certifications = [
   { name: "Project Management with Agile Methodologies and Lean Approaches", issuer: "Fundación Telefónica", year: 2024 },
   { name: "Web Design with HTML5 + CSS", issuer: "Fundación Telefónica", year: 2024 },
   { name: "Programación con JavaScript", issuer:"Fundación Telefónica", year: 2024},
-
-  
 ];
 ---
 
-<section class="text-xl mt-5">
+<section class="text-xl mt-5" aria-labelledby="certifications-heading">
+    <h2 id="certifications-heading" class="sr-only">Certifications</h2>
+    
     <div 
-    title="color line" 
-    class="text-2xl font-bold mb-5 text-violet-400 border-b-2 border-violet-400"
-    role="presentation"
-></div>
-    <ul class="list-none text-base space-y-4">
+        title="color line" 
+        class="text-2xl font-bold mb-5 text-violet-400 border-b-2 border-violet-400"
+        role="presentation"
+        aria-hidden="true"
+    ></div>
+
+    <ul class="list-none text-base space-y-4" aria-labelledby="certifications-list">
+        <h3 id="certifications-list" class="sr-only">List of certifications</h3>
         {certifications.map(cert => (
-            <li class="mb-4 p-4  border-transparent rounded-lg shadow-lg">
-                <div class="text-white font-semibold">{cert.name}</div>
-                <div class="text-violet-400">Issued by {cert.issuer} - {cert.year}</div>
+            <li 
+                class="mb-4 p-4 border-transparent rounded-lg shadow-lg"
+                role="listitem" 
+                aria-labelledby={`cert-${cert.name.replace(/\s+/g, '-').toLowerCase()}`}
+            >
+                <div 
+                    id={`cert-${cert.name.replace(/\s+/g, '-').toLowerCase()}`}
+                    class="text-white font-semibold"
+                    aria-label={`Certification name: ${cert.name}`}
+                >
+                    {cert.name}
+                </div>
+                <div 
+                    class="text-violet-400"
+                    aria-label={`Issued by: ${cert.issuer}, Year: ${cert.year}`}
+                >
+                    Issued by {cert.issuer} - {cert.year}
+                </div>
             </li>
         ))}
     </ul>

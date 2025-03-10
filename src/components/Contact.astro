@@ -2,11 +2,30 @@
 const email = "ericmoyacarmona7@gmail.com";
 ---
 
-<section id="contact" class="flex flex-col items-center mt-5 p-5 rounded-lg shadow-md">
-    <button id="emailButton" class="bg-violet-600 text-white py-1 px-4 my-2 cursor-pointer rounded-full transition duration-300 ease-in-out hover:bg-violet-900">Send Email</button>
-    <div class="email-container flex items-center px-5 py-2 rounded-full my-2 bg-gray-500" style="background-color: rgba(128, 128, 128, 0.5);">
-        <p id="emailText" class="email-text m-0 text-base  mr-2 text-white">{email}</p>
-        <button id="copyButton" class="bg-violet-600 text-white border border-white border-opacity-30 py-1 px-2 cursor-pointer rounded-full transition duration-300 ease-in-out hover:bg-violet-900"><span id="arrow">&larr;</span> Copy</button>
+<section id="contact" class="flex flex-col items-center mt-5 p-5 rounded-lg shadow-md" aria-labelledby="contact-heading">
+    <h2 id="contact-heading" class="sr-only">Contact Information</h2>
+
+    <button 
+        id="emailButton" 
+        class="bg-violet-600 text-white py-1 px-4 my-2 cursor-pointer rounded-full transition duration-300 ease-in-out hover:bg-violet-900" 
+        aria-label="Send email to the specified address">
+        Send Email
+    </button>
+
+    <div 
+        class="email-container flex items-center px-5 py-2 rounded-full my-2 bg-gray-500" 
+        style="background-color: rgba(128, 128, 128, 0.5);" 
+        aria-live="polite"
+        aria-describedby="emailText">
+        
+        <p id="emailText" class="email-text m-0 text-base mr-2 text-white">{email}</p>
+
+        <button 
+            id="copyButton" 
+            class="bg-violet-600 text-white border border-white border-opacity-30 py-1 px-2 cursor-pointer rounded-full transition duration-300 ease-in-out hover:bg-violet-900"
+            aria-label="Copy email address to clipboard">
+            <span id="arrow">&larr;</span> Copy
+        </button>
     </div>
 </section>
 

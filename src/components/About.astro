@@ -25,7 +25,9 @@ const hardSkills = [
 ];
 ---
 
-<section class="text-xl">
+<section class="text-xl" aria-labelledby="skills-section">
+    <h2 id="skills-section" class="sr-only">Skills Section</h2>
+
     <p class="mb-5" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
         Hello, I'm <strong class="text-violet-400">Eric</strong>, a passionate and dedicated <strong class="text-violet-400">student</strong> specializing in <strong class="text-violet-400">Cross-Platform Application Development</strong>. With a strong foundation in both <strong class="text-violet-400">web development</strong> and <strong class="text-violet-400">machine learning</strong>, I am constantly exploring and adopting new <strong class="text-violet-400">technologies</strong> to enhance my skill set. I thrive on the challenge of creating <strong class="text-violet-400">efficient</strong>, <strong class="text-violet-400">scalable</strong>, and <strong class="text-violet-400">user-friendly</strong> applications, and I am committed to continuously refining my abilities through hands-on projects.
     </p>
@@ -38,41 +40,44 @@ const hardSkills = [
     
     <div class="flex flex-col md:flex-row justify-between mt-10 space-y-6 md:space-y-0">
         <div class="w-full md:w-1/2 pr-0 md:pr-4">
-            <h2 class="text-xl font-bold mb-3 text-violet-400 border-b-2 border-violet-400 animate-pulse">Soft Skills</h2>
-            <ul class="list-none list-inside text-base space-y-4">
-            {softSkills.map(skill => (
-                <li class="mb-4">
-                    <div class="flex justify-between items-center mb-2">
-                        <span class="text-white">{skill.name}</span>
-                        <span class="text-white">{skill.percentage}%</span>
-                    </div>
-                    <div class="w-full bg-gray-700 rounded-full h-2.5">
-                        <div class="bg-green-400 h-2.5 rounded-full" style={{ width: `${skill.percentage}%` }}></div>
-                    </div>
-                </li>
-            ))}
+            <h3 class="text-xl font-bold mb-3 text-violet-400 border-b-2 border-violet-400 animate-pulse" id="soft-skills-heading">
+                Soft Skills
+            </h3>
+            <ul class="list-none list-inside text-base space-y-4" aria-labelledby="soft-skills-heading">
+                {softSkills.map(skill => (
+                    <li class="mb-4" role="listitem" aria-labelledby={`soft-skill-${skill.name.replace(/\s+/g, '-').toLowerCase()}`}>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-white" id={`soft-skill-${skill.name.replace(/\s+/g, '-').toLowerCase()}`}>{skill.name}</span>
+                            <span class="text-white">{skill.percentage}%</span>
+                        </div>
+                        <div class="w-full bg-gray-700 rounded-full h-2.5" aria-live="polite">
+                            <div class="bg-green-400 h-2.5 rounded-full" style={{ width: `${skill.percentage}%` }}></div>
+                        </div>
+                    </li>
+                ))}
             </ul>
         </div>
         
         <div class="w-full md:w-1/2 pl-0 md:pl-4">
-            <h2 class="text-xl font-bold mb-3 text-violet-400 border-b-2 border-violet-400 animate-pulse">Technical Skills</h2>
-            <ul class="list-none list-inside text-base space-y-4">
-            {hardSkills.map(skill => (
-                <li class="mb-4">
-                    <div class="flex justify-between items-center mb-2">
-                        <div class="flex items-center">
-                            <img src={skill.icon} alt={skill.name} class="w-8 h-8 mr-2 rounded-sm" loading="lazy"/>
-                            <span class="text-white">{skill.name}</span>
+            <h3 class="text-xl font-bold mb-3 text-violet-400 border-b-2 border-violet-400 animate-pulse" id="technical-skills-heading">
+                Technical Skills
+            </h3>
+            <ul class="list-none list-inside text-base space-y-4" aria-labelledby="technical-skills-heading">
+                {hardSkills.map(skill => (
+                    <li class="mb-4" role="listitem" aria-labelledby={`tech-skill-${skill.name.replace(/\s+/g, '-').toLowerCase()}`}>
+                        <div class="flex justify-between items-center mb-2">
+                            <div class="flex items-center">
+                                <img src={skill.icon} alt={`${skill.name} icon`} class="w-8 h-8 mr-2 rounded-sm" loading="lazy"/>
+                                <span class="text-white" id={`tech-skill-${skill.name.replace(/\s+/g, '-').toLowerCase()}`}>{skill.name}</span>
+                            </div>
+                            <span class="text-white">{skill.percentage}%</span>
                         </div>
-                        <span class="text-white">{skill.percentage}%</span>
-                    </div>
-                    <div class="w-full bg-gray-700 rounded-full h-2.5">
-                        <div class="bg-green-400 h-2.5 rounded-full" style={{ width: `${skill.percentage}%` }}></div>
-                    </div>
-                </li>
-            ))}
+                        <div class="w-full bg-gray-700 rounded-full h-2.5" aria-live="polite">
+                            <div class="bg-green-400 h-2.5 rounded-full" style={{ width: `${skill.percentage}%` }}></div>
+                        </div>
+                    </li>
+                ))}
             </ul>
         </div>
-    </div>
     </div>
 </section>
