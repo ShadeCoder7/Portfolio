@@ -20,17 +20,16 @@ import About from '../components/About.astro';
 					src="/assets/icons/Logo.png"
 					alt="Professional photo of Eric" 
 				/>
-				<h1 class="text-white text-3xl lg:text-5xl font-bold pb-6 lg:pb-10 animate-bounce">
+				<h1 class="text-white text-3xl lg:text-5xl font-bold pb-6 lg:pb-10">
 					<span class="bg-gradient-to-r from-green-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
 						Hello, I'm Eric
 					</span>
 				</h1>
 				
-				<h2 class="text-xl lg:text-2xl opacity-80 max-w-[700px] mx-auto">
-					<span class="text-blue-300 font-semibold">Final-year student</span> in Cross-Platform Application Development, specializing in <span class="text-blue-300 font-semibold">Machine Learning</span>. 
-					Passionate about learning and building impactful solutions, 
-					<span class="text-blue-300 font-semibold">I’m eager to start my professional journey!</span>
-					<span class="text-blue-300 font-semibold">Seville, Spain.</span>
+				<h2 class="text-xl lg:text-2xl opacity-90 max-w-[700px] mx-auto">
+					<span class="text-violet-400 font-semibold">Final-year student</span> in Cross-Platform Application Development, specializing in <span class="text-violet-400 font-semibold">Machine Learning</span>. 
+					Passionate about learning and building impactful solutions. 
+					<span class="text-violet-400 font-semibold">Seville, Spain.</span>
 				</h2>
 			</div>
 
@@ -78,7 +77,7 @@ import About from '../components/About.astro';
 				<button class="bg-gradient-to-r from-blue-600 to-green-600 text-white px-8 py-3 rounded-full shadow-lg hover:from-green-600 hover:to-blue-600 transition-transform transform hover:scale-105 border border-gray-400 font-semibold" id="showModalButton">
 					See More Projects
 				</button>
-				<div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden transition-opacity duration-300">
+				<div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 invisible transition-opacity duration-300">
 					<div class="bg-white rounded-lg shadow-lg p-8 max-w-md text-center transform transition-transform duration-300 scale-95">
 						<h2 class="text-3xl font-bold mb-4 text-gray-800">More Projects Coming Soon!</h2>
 						<p class="text-gray-600 mb-6">Stay tuned for more updates on exciting projects that I'm working on. Thank you for your interest!</p>
@@ -109,27 +108,30 @@ import About from '../components/About.astro';
 
 		
 
-	</main>
-		<script>
-			const showModalButton = document.getElementById('showModalButton');
-			if (showModalButton) {
-				showModalButton.addEventListener('click', function() {
-					const modal = document.getElementById('modal');
-					if (modal) {
-						modal.classList.remove('hidden');
-					}
-				});
-			}
-
-			const closeModalButton = document.getElementById('closeModalButton');
-			if (closeModalButton) {
-				closeModalButton.addEventListener('click', function() {
-					const modal = document.getElementById('modal');
-					if (modal) {
-						modal.classList.add('hidden');
-					}
-				});
-			}
-		</script>
-	</main>
+		<main>
+			<script>
+				const showModalButton = document.getElementById('showModalButton');
+				if (showModalButton) {
+					showModalButton.addEventListener('click', function() {
+						const modal = document.getElementById('modal');
+						if (modal) {
+							modal.classList.remove('opacity-0', 'invisible');
+							modal.classList.add('opacity-100', 'visible');
+						}
+					});
+				}
+		
+				const closeModalButton = document.getElementById('closeModalButton');
+				if (closeModalButton) {
+					closeModalButton.addEventListener('click', function() {
+						const modal = document.getElementById('modal');
+						if (modal) {
+							modal.classList.remove('opacity-100', 'visible');
+							modal.classList.add('opacity-0', 'invisible');
+						}
+					});
+				}
+			</script>
+		</main>
+		
 </Layout>

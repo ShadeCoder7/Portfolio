@@ -31,24 +31,28 @@ const { description, title } = Astro.props;
 </html>
 
 <style is:global>
-	:root{
-		color-scheme: light dark;
-	}
 	html{
 		font-family: "Rubik Variable", Arial, sans-serif;
 	}
 
 	body{
-		background: #353535;
+		background-color: #353535;
+		color: #ffffff; 
 		display:flex;
 		flex-direction: column;
 		min-height: 100vh; 
 		scroll-behavior: smooth;
 	}
+
+	/* Reduce motion for accessibility */
 	@media (prefers-reduced-motion: reduce) {
 		html {
 			scroll-behavior: auto;
 		}
+	}
+
+	:root {
+		color-scheme: dark;
 	}
 </style>
 
