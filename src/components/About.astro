@@ -23,19 +23,19 @@ const hardSkills = [
 
 <section class="text-xl">
     <p class="mb-10">
-        Hello, I'm <strong class="text-blue-200">Eric</strong>. I am a passionate <strong class="text-blue-200">student</strong> with experience in creating <strong class="text-blue-200">modern</strong> and <strong class="text-blue-200">efficient</strong> web applications. I love learning new <strong class="text-blue-200">technologies</strong> and continuously improving my skills through projects. Although I am currently studying officially, I also enjoy learning in a <strong class="text-blue-200">self-taught</strong> manner to complement my knowledge. In my free time, I enjoy working on personal programming projects, playing <strong class="text-blue-200">video games</strong>, and going to the <strong class="text-blue-200">cinema</strong>.
+        Hello, I'm <strong class="text-violet-400">Eric</strong>. I am a passionate <strong class="text-violet-400">student</strong> with experience in creating <strong class="text-violet-400">modern</strong> and <strong class="text-violet-400">efficient</strong> web applications. I love learning new <strong class="text-violet-400">technologies</strong> and continuously improving my skills through projects. Although I am currently studying officially, I also enjoy learning in a <strong class="text-violet-400">self-taught</strong> manner to complement my knowledge. In my free time, I enjoy working on personal programming projects, playing <strong class="text-violet-400">video games</strong>, and going to the <strong class="text-violet-400">cinema</strong>.
     </p>
     <p class="text-xl mb-6">
-        Here is a summary of my <strong class="text-blue-200">soft</strong> and <strong class="text-blue-200">technical</strong> skills. These skills allow me to adapt and perform efficiently in various projects and work teams.
+        Here is a summary of my <strong class="text-violet-400">soft</strong> and <strong class="text-violet-400">technical</strong> skills. These skills allow me to adapt and perform efficiently in various projects and work teams.
     </p>
     
     <div class="flex flex-col md:flex-row justify-between mt-10 space-y-6 md:space-y-0">
         <div class="w-full md:w-1/2 pr-0 md:pr-4">
             <h2 class="text-xl font-bold mb-3 text-violet-400 border-b-2 border-violet-400 animate-pulse">Soft Skills</h2>
-            <ul class="list-none list-inside text-base space-y-2">
+            <ul class="list-none list-inside text-base space-y-4">
             {softSkills.map(skill => (
-                <li class="mb-2">
-                    <div class="flex justify-between items-center mb-1">
+                <li class="mb-4">
+                    <div class="flex justify-between items-center mb-2">
                         <span class="text-white">{skill.name}</span>
                         <span class="text-white">{skill.percentage}%</span>
                     </div>
@@ -49,10 +49,10 @@ const hardSkills = [
         
         <div class="w-full md:w-1/2 pl-0 md:pl-4">
             <h2 class="text-xl font-bold mb-3 text-violet-400 border-b-2 border-violet-400 animate-pulse">Technical Skills</h2>
-            <ul class="list-none list-inside text-base space-y-2">
+            <ul class="list-none list-inside text-base space-y-4">
             {hardSkills.map(skill => (
-                <li class="mb-2">
-                    <div class="flex justify-between items-center mb-1">
+                <li class="mb-4">
+                    <div class="flex justify-between items-center mb-2">
                         <div class="flex items-center">
                             <img src={skill.icon} alt={skill.name} class="w-8 h-8 mr-2 rounded-full" />
                             <span class="text-white">{skill.name}</span>
@@ -66,5 +66,6 @@ const hardSkills = [
             ))}
             </ul>
         </div>
+    </div>
     </div>
 </section>
