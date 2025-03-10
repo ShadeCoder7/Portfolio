@@ -14,45 +14,49 @@ const { description, title } = Astro.props;
 
 <!doctype html>
 <html lang="es">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content={description} />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" href="/assets/icons/Logo.ico" type="image/x-icon" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body class="px-9">
-		<div class="fixed inset-0 z-[-2] h-full w-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
-		<Header />
-		<slot />
-		<Footer />
-	</body>	
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/assets/icons/Logo.ico" type="image/x-icon" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body class="px-9">
+    <div class="fixed inset-0 z-[-2] h-full w-full bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" aria-hidden="true"></div>
+    <Header />
+    
+    <!-- Main content -->
+    <main>
+      <slot />
+    </main>
+    
+    <Footer />
+  </body>  
 </html>
 
 <style is:global>
-	html{
-		font-family: "Rubik Variable", Arial, sans-serif;
-	}
+  html {
+    font-family: "Rubik Variable", Arial, sans-serif;
+  }
 
-	body{
-		background-color: #353535;
-		color: #ffffff; 
-		display:flex;
-		flex-direction: column;
-		min-height: 100vh; 
-		scroll-behavior: smooth;
-	}
+  body {
+    background-color: #353535;
+    color: #ffffff; 
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    scroll-behavior: smooth;
+  }
 
-	/* Reduce motion for accessibility */
-	@media (prefers-reduced-motion: reduce) {
-		html {
-			scroll-behavior: auto;
-		}
-	}
+  /* Reduce motion for accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
 
-	:root {
-		color-scheme: dark;
-	}
+  :root {
+    color-scheme: dark;
+  }
 </style>
-
