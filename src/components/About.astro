@@ -11,12 +11,12 @@ const softSkills = [
 ];
 const hardSkills = [
     { name: "Java", icon: "/assets/icons/Java.svg", percentage: 85 },
+    { name: "Python", icon: "/assets/icons/Python.svg", percentage: 90 },
+    { name: "JavaScript", icon: "/assets/icons/JavaScript.svg", percentage: 85 },
     { name: "SQL", icon: "/assets/icons/MySQL.svg", percentage: 80 },
     { name: "Astro", icon: "/assets/icons/Astro.svg", percentage: 75 },
     { name: "TailwindCSS", icon: "/assets/icons/TailwindCSS.svg", percentage: 70 },
-    { name: "Python", icon: "/assets/icons/Python.svg", percentage: 90 },
-    { name: "JavaScript", icon: "/assets/icons/JavaScript.svg", percentage: 85 },
-    { name: "Django", icon: "/assets/icons/Django.svg", percentage: 80 },
+    { name: "Spring", icon: "/assets/icons/Spring.svg", percentage: 80 },
     { name: "React", icon: "/assets/icons/React.svg", percentage: 75 }
 ];
 ---
@@ -31,7 +31,7 @@ const hardSkills = [
     
     <div class="flex flex-col md:flex-row justify-between mt-10 space-y-6 md:space-y-0">
         <div class="w-full md:w-1/2 pr-0 md:pr-4">
-            <h2 class="text-xl font-bold mb-3 text-yellow-300 border-b-2 border-blue-300 animate-pulse">Soft Skills</h2>
+            <h2 class="text-xl font-bold mb-3 text-violet-400 border-b-2 border-violet-400 animate-pulse">Soft Skills</h2>
             <ul class="list-none list-inside text-base space-y-2">
             {softSkills.map(skill => (
                 <li class="mb-2">
@@ -40,7 +40,7 @@ const hardSkills = [
                         <span class="text-white">{skill.percentage}%</span>
                     </div>
                     <div class="w-full bg-gray-700 rounded-full h-2.5">
-                        <div class="bg-blue-500 h-2.5 rounded-full" style={{ width: `${skill.percentage}%` }}></div>
+                        <div class="bg-green-400 h-2.5 rounded-full" style={{ width: `${skill.percentage}%` }}></div>
                     </div>
                 </li>
             ))}
@@ -48,7 +48,7 @@ const hardSkills = [
         </div>
         
         <div class="w-full md:w-1/2 pl-0 md:pl-4">
-            <h2 class="text-xl font-bold mb-3 text-yellow-300 border-b-2 border-blue-300 animate-pulse">Technical Skills</h2>
+            <h2 class="text-xl font-bold mb-3 text-violet-400 border-b-2 border-violet-400 animate-pulse">Technical Skills</h2>
             <ul class="list-none list-inside text-base space-y-2">
             {hardSkills.map(skill => (
                 <li class="mb-2">
@@ -60,7 +60,7 @@ const hardSkills = [
                         <span class="text-white">{skill.percentage}%</span>
                     </div>
                     <div class="w-full bg-gray-700 rounded-full h-2.5">
-                        <div class="bg-blue-500 h-2.5 rounded-full" style={{ width: `${skill.percentage}%` }}></div>
+                        <div class="bg-green-400 h-2.5 rounded-full" style={{ width: `${skill.percentage}%` }}></div>
                     </div>
                 </li>
             ))}
