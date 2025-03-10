@@ -11,8 +11,9 @@ The main goal of this portfolio is to provide an interactive and visually appeal
 1. **Home:** A brief introduction and navigation to key sections.  
 2. **Work Experience:** Insights into my professional background (under ongoing updates).  
 3. **Projects:** A collection of my personal and collaborative projects, with descriptions and highlights.  
-4. **About:** My journey as a developer, educational background, and aspirations.  
-5. **Contact:** Easy ways to reach out, including email and social media links.  
+4. **Certifications:** A list of the certifications I’ve earned, highlighting my expertise and continuous learning.  
+5. **About:** My journey as a developer, educational background, and aspirations.  
+6. **Contact:** Easy ways to reach out, including email and social media links.  
 
 ---
 
@@ -50,8 +51,6 @@ Visit the live site here: [Eric's Portfolio](https://ericm-dev-portfolio.netlify
    - A collaborative project using **Django** for backend and **React** for frontend, with designs made in **Figma**.  
 2. **Culinary Social Network**  
    - A recipe-focused social platform built with **Java** for the backend and SQL databases for storage.  
-3. **Academy Management Application**  
-   - A project aimed at managing student registrations in a database, focused on the **database management** for student enrollment.
 
 ---
 
