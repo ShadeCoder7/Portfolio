@@ -13,6 +13,7 @@ const hardSkills = [
     { name: "Java", icon: "/assets/icons/Java.svg", percentage: 80 },
     { name: "Python", icon: "/assets/icons/Python.svg", percentage: 65 },
     { name: "JavaScript", icon: "/assets/icons/JavaScript.svg", percentage: 70 },
+    { name: "Kotlin", icon: "/assets/icons/Kotlin.svg", percentage: 75 },
     { name: "MySQL", icon: "/assets/icons/MySQL.svg", percentage: 80 },
     { name: "PostgreSQL", icon: "/assets/icons/PostgreSQL.svg", percentage: 70 },
     { name: "Astro", icon: "/assets/icons/Astro.svg", percentage: 70 },
@@ -57,7 +58,7 @@ const hardSkills = [
                 <li class="mb-4">
                     <div class="flex justify-between items-center mb-2">
                         <div class="flex items-center">
-                            <img src={skill.icon} alt={skill.name} class="w-8 h-8 mr-2 rounded-full" />
+                            <img src={skill.icon} alt={skill.name} class="w-8 h-8 mr-2 rounded-sm" />
                             <span class="text-white">{skill.name}</span>
                         </div>
                         <span class="text-white">{skill.percentage}%</span>
