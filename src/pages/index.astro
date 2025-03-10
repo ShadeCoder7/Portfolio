@@ -4,6 +4,7 @@ import Layout from '../layouts/Layout.astro';
 import Contact from '../components/Contact.astro';
 import Projects from '../components/Projects.astro';
 import About from '../components/About.astro';
+import Certifications from '../components/Certifications.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -89,6 +90,15 @@ import About from '../components/About.astro';
 				</div>
 			</div>
 			</div>
+		</SectionContainer>
+
+		<SectionContainer id="certifications" class="mt-20">
+			<h2 class="text-2xl font-semibold mb-6 flex items-center gap-3 mt-5">
+				<img src="/assets/icons/CertificationH.svg" alt="Pick" class="size-7 animate-bounce" />
+				Certifications
+			</h2>
+			<Certifications />
+			
 		</SectionContainer>
 
 		<SectionContainer id="about" class="mt-20">
