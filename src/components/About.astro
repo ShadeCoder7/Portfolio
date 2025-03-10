@@ -1,14 +1,23 @@
 ---
-const softSkills = ["Communication", "Teamwork", "Adaptability", "Problem Solving", "Creativity"];
+const softSkills = [
+    { name: "Communication", percentage: 82 },
+    { name: "Teamwork", percentage: 85 },
+    { name: "Adaptability", percentage: 80 },
+    { name: "Problem Solving", percentage: 75 },
+    { name: "Creativity", percentage: 75 },
+    { name: "Leadership", percentage: 65 },
+    { name: "Time Management", percentage: 80 },
+    { name: "Critical Thinking", percentage: 70 }
+];
 const hardSkills = [
-    { name: "Java", icon: "/assets/icons/Java.svg" },
-    { name: "SQL", icon: "/assets/icons/MySQL.svg" },
-    { name: "Astro", icon: "/assets/icons/Astro.svg" },
-    { name: "TailwindCSS", icon: "/assets/icons/TailwindCSS.svg" },
-    { name: "Python", icon: "/assets/icons/Python.svg" },
-    { name: "JavaScript", icon: "/assets/icons/JavaScript.svg" },
-    { name: "Django", icon: "/assets/icons/Django.svg" },
-    { name: "React", icon: "/assets/icons/React.svg" }
+    { name: "Java", icon: "/assets/icons/Java.svg", percentage: 85 },
+    { name: "SQL", icon: "/assets/icons/MySQL.svg", percentage: 80 },
+    { name: "Astro", icon: "/assets/icons/Astro.svg", percentage: 75 },
+    { name: "TailwindCSS", icon: "/assets/icons/TailwindCSS.svg", percentage: 70 },
+    { name: "Python", icon: "/assets/icons/Python.svg", percentage: 90 },
+    { name: "JavaScript", icon: "/assets/icons/JavaScript.svg", percentage: 85 },
+    { name: "Django", icon: "/assets/icons/Django.svg", percentage: 80 },
+    { name: "React", icon: "/assets/icons/React.svg", percentage: 75 }
 ];
 ---
 
@@ -23,10 +32,16 @@ const hardSkills = [
     <div class="flex flex-col md:flex-row justify-between mt-10 space-y-6 md:space-y-0">
         <div class="w-full md:w-1/2 pr-0 md:pr-4">
             <h2 class="text-xl font-bold mb-3 text-yellow-300 border-b-2 border-blue-300 animate-pulse">Soft Skills</h2>
-            <ul class="list-disc list-inside text-base space-y-2">
+            <ul class="list-none list-inside text-base space-y-2">
             {softSkills.map(skill => (
-                <li class="flex items-center mb-2 p-2 border border-gray-800 bg-gray-800 rounded-full hover:bg-gray-700 transition duration-300 ease-in-out transform hover:scale-105">
-                <span class="text-white">{skill}</span>
+                <li class="mb-2">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="text-white">{skill.name}</span>
+                        <span class="text-white">{skill.percentage}%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-2.5">
+                        <div class="bg-blue-500 h-2.5 rounded-full" style={{ width: `${skill.percentage}%` }}></div>
+                    </div>
                 </li>
             ))}
             </ul>
@@ -34,11 +49,19 @@ const hardSkills = [
         
         <div class="w-full md:w-1/2 pl-0 md:pl-4">
             <h2 class="text-xl font-bold mb-3 text-yellow-300 border-b-2 border-blue-300 animate-pulse">Technical Skills</h2>
-            <ul class="list-disc list-inside text-base space-y-2">
+            <ul class="list-none list-inside text-base space-y-2">
             {hardSkills.map(skill => (
-                <li class="flex items-center mb-2 p-1 border border-gray-800 bg-gray-800 rounded-full hover:bg-gray-700 transition duration-300 ease-in-out transform hover:scale-105">
-                <img src={skill.icon} alt={skill.name} class="w-8 h-8 mr-2 rounded-full" />
-                <span class="text-white">{skill.name}</span>
+                <li class="mb-2">
+                    <div class="flex justify-between items-center mb-1">
+                        <div class="flex items-center">
+                            <img src={skill.icon} alt={skill.name} class="w-8 h-8 mr-2 rounded-full" />
+                            <span class="text-white">{skill.name}</span>
+                        </div>
+                        <span class="text-white">{skill.percentage}%</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-2.5">
+                        <div class="bg-blue-500 h-2.5 rounded-full" style={{ width: `${skill.percentage}%` }}></div>
+                    </div>
                 </li>
             ))}
             </ul>
