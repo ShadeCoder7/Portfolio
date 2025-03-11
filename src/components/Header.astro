@@ -21,13 +21,15 @@
         </a>
         <div class="language-switcher ml-5">
             <label for="language-selector" class="sr-only">Select Language</label>
-            <select id="language-selector" onchange="alert('This feature is not yet available.')" class="text-violet-400 bg-transparent border-2 border-violet-400 rounded-lg p-2">
+            <select id="language-selector" onchange="handleLanguageChange()" class="text-violet-400 bg-transparent border-2 border-violet-400 rounded-lg p-2">
             <option value="en" selected>English</option>
             <option value="es">Español</option>
+            <option value="gr">Deutsch</option>
             <option value="fr">Français</option>
             </select>
-        </div>
-    </nav>
+            </div>
+        </nav>
+    </header>
 </header>
 
 <style>
@@ -95,4 +97,26 @@ document.querySelectorAll('.nav-link').forEach((link) => {
         });
     });
 });
+
+function handleLanguageChange(): void {
+        const languageSelector = document.getElementById('language-selector') as HTMLSelectElement | null;
+        const selectedLanguage = (languageSelector as HTMLSelectElement)?.value;
+        let message = 'This feature is not yet available.';
+    
+        switch (selectedLanguage) {
+        case 'es':
+            message = 'Esta función aún no está disponible.';
+            break;
+        case 'gr':
+            message = 'Diese Funktion ist noch nicht verfügbar.';
+            break;
+        case 'fr':
+            message = 'Cette fonctionnalité n\'est pas encore disponible.';
+            break;
+        }
+    
+        alert(message);
+    }
+    
+    document.getElementById('language-selector')?.addEventListener('change', handleLanguageChange);
 </script>
