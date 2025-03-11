@@ -23,6 +23,7 @@ The main goal of this portfolio is to provide an interactive and visually appeal
 - **Fully responsive:** Optimized for all devices, from mobile phones to large screens.  
 - **Efficient navigation:** Simple and intuitive transitions between sections.  
 - **Fast loading:** Powered by **Astro**, ensuring high performance and minimal latency.  
+- **Language switcher:** Supports four languages: **English, Spanish, French, and German** (🚧 *Work in progress*).  
 
 ---
 
