@@ -1,5 +1,5 @@
 <header id="main-header" class="fixed top-0 left-0 w-full z-50 flex flex-col justify-center items-center py-1 transition-all duration-300 shadow-lg backdrop-blur-md">
-    <nav class="flex flex-row gap-2 sm:gap-3 md:gap-8 lg:gap-10 xl:gap-11 opacity-70 justify-center flex-wrap">
+    <nav class="flex flex-row gap-2 sm:gap-3 md:gap-8 lg:gap-10 xl:gap-11 opacity-70 justify-center items-center flex-nowrap">
         <!-- Enlaces de navegación -->
         <a href="#top" class="nav-link hover:text-blue-700 transition-colors relative px-2 py-2 border-2 border-transparent rounded-full flex items-center gap-2">
             <img src="/assets/icons/Home.svg" alt="Home Icon"/>
@@ -19,18 +19,18 @@
         <a href="#contact" class="nav-link hover:text-blue-700 transition-colors relative px-2 py-2 border-2 border-transparent rounded-full flex items-center gap-2">
             <img src="/assets/icons/ContactH.svg" alt="Contact Icon"/>
         </a>
-        <div class="language-switcher ml-5">
+        <div class="language-switcher ml-2 sm:ml-5 flex items-center">
             <label for="language-selector" class="sr-only">Select Language</label>
-            <select id="language-selector" onchange="handleLanguageChange()" class="text-violet-400 bg-transparent border-2 border-violet-400 rounded-lg p-2">
-            <option value="en" selected>English</option>
-            <option value="es">Español</option>
-            <option value="de">Deutsch</option>
-            <option value="fr">Français</option>
+            <select id="language-selector" onchange="handleLanguageChange()" class="text-violet-400 bg-transparent border-2 border-violet-400 rounded-lg p-1 text-sm sm:text-base">
+                <option value="en" selected>English</option>
+                <option value="es">Español</option>
+                <option value="de">Deutsch</option>
+                <option value="fr">Français</option>
             </select>
-            </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 </header>
+
 
 <style>
     a::before {
@@ -76,47 +76,55 @@
 </style>
 
 <script>
-const header = document.getElementById('main-header')!;
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.getElementById("main-header");
 
-document.querySelectorAll('.nav-link').forEach((link) => {
-    link.addEventListener('click', function(this: HTMLAnchorElement, event) {
-        event.preventDefault();
-        const targetId = this.getAttribute('href')?.substring(1);
-        if (!targetId) return;
-        const targetElement = document.getElementById(targetId);
-        if (!targetElement) return;
-        if (!header) return;
-        const headerOffset = header.offsetHeight;
-        const additionalOffset = 0;
-        const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-        const offsetPosition = elementPosition - headerOffset - additionalOffset;
+    document.querySelectorAll(".nav-link").forEach((link) => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute("href")?.substring(1);
+            if (!targetId) return;
+            const targetElement = document.getElementById(targetId);
+            if (!targetElement || !header) return;
 
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'auto'
+            const headerOffset = header.offsetHeight;
+            const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+            const offsetPosition = elementPosition - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "auto",
+            });
         });
     });
+
+    function handleLanguageChange() {
+        const languageSelector = document.getElementById("language-selector");
+        if (!languageSelector) return;
+
+        const selectedLanguage = (languageSelector as HTMLSelectElement)?.value;
+        let message = "This feature is not yet available.";
+
+        switch (selectedLanguage) {
+            case "es":
+                message = "Esta función aún no está disponible.";
+                break;
+            case "de":
+                message = "Diese Funktion ist noch nicht verfügbar.";
+                break;
+            case "fr":
+                message = "Cette fonctionnalité n'est pas encore disponible.";
+                break;
+        }
+
+        setTimeout(() => alert(message), 100); // Retraso para mejorar la compatibilidad móvil
+        languageSelector.blur(); // Forzar pérdida de foco en móviles
+    }
+
+    const languageSelector = document.getElementById("language-selector");
+    if (languageSelector) {
+        languageSelector.addEventListener("change", handleLanguageChange);
+    }
 });
 
-function handleLanguageChange(): void {
-        const languageSelector = document.getElementById('language-selector') as HTMLSelectElement | null;
-        const selectedLanguage = (languageSelector as HTMLSelectElement)?.value;
-        let message = 'This feature is not yet available.';
-    
-        switch (selectedLanguage) {
-        case 'es':
-            message = 'Esta función aún no está disponible.';
-            break;
-        case 'de':
-            message = 'Diese Funktion ist noch nicht verfügbar.';
-            break;
-        case 'fr':
-            message = 'Cette fonctionnalité n\'est pas encore disponible.';
-            break;
-        }
-    
-        alert(message);
-    }
-    
-    document.getElementById('language-selector')?.addEventListener('change', handleLanguageChange);
 </script>
