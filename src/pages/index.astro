@@ -5,6 +5,7 @@ import Contact from '../components/Contact.astro';
 import Projects from '../components/Projects.astro';
 import About from '../components/About.astro';
 import Certifications from '../components/Certifications.astro';
+import Work from '../components/Work.astro';
 ---
 
 <Layout 
@@ -77,10 +78,8 @@ import Certifications from '../components/Certifications.astro';
         <img src="/assets/icons/Job.svg" alt="Job icon" class="size-7 animate-bounce" />
         Work Experience
       </h2>
-      <div class="bg-transparent text-white rounded-lg shadow-2xl p-8 mt-8 text-center border border-transparent">
-        <h2 class="text-3xl text-yellow-300 opacity-80 font-bold mb-4 animate-pulse">Coming Soon...</h2>
-        <p class="text-xl opacity-60">Stay tuned for more updates!</p>
-      </div>
+      <Work />
+      
     </SectionContainer>
 
     <SectionContainer id="projects" class="mt-20" role="region" aria-labelledby="projects-heading">
