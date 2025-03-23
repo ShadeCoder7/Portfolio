@@ -45,20 +45,20 @@ const PROJECTS = [
 {
     PROJECTS.map(({image, title, description, tags, github, link}) => (
     <article class="mb-20">
-        <h3 class="text-2xl font-bold text-violet-500 mb-4">{title}</h3>
-        <p class="text-lg mb-4">{description}</p>
+        <h3 class="text-2xl font-bold text-violet-400 mb-4">{title}</h3>
+        <p class="text-lg text-gray-300 mb-4">{description}</p>
         <ul class="flex list-none flex-wrap mb-4">
             {tags.map(tag => (
             <li class="flex items-center rounded-full border border-white border-opacity-30 p-1 mr-2 bg-gray-800 mb-2 transition-transform transform hover:scale-105 hover:bg-gray-700 cursor-pointer">
             <img src={`/assets/icons/${tag}.svg`} alt={`${tag} icon`} class="w-4 h-4 ml-1 mr-1 rounded-xl" onerror="this.onerror=null; this.style.display='none';" loading="lazy" />
-            <span class="mr-1">{tag}</span>
+            <span class="mr-1 text-gray-200">{tag}</span>
             </li>
             ))}
         </ul>
         
         {image ? (
             <img
-            class="rounded shadow-white/10 shadow-opacity-10 shadow-lg transition-transform transform hover:scale-105 will-change-transform"
+            class="rounded shadow-lg transition-transform transform hover:scale-105 will-change-transform"
             src={image} 
             alt={`Screenshot of the project ${title}`} 
             onerror="this.style.display = 'none'"
@@ -66,14 +66,14 @@ const PROJECTS = [
             />
         ) : (
             <div class="bg-transparent text-white rounded-lg shadow-2xl p-8 mt-8 text-center border border-transparent" aria-live="polite">
-            <h2 class="text-xl text-yellow-200 opacity-80 font-bold mb-4">{"Photos coming soon..."}</h2>
-            <p class="text-lg opacity-60">We are currently working on this project!</p>
+            <h2 class="text-xl text-yellow-300 font-bold mb-4">{"Photos coming soon..."}</h2>
+            <p class="text-lg text-gray-400">We are currently working on this project!</p>
             </div>
         )}
 
         <div class="flex flex-wrap mt-7 mb-4">
             {github && (
-            <a href={github} target="_blank" class="inline-block px-4 py-2 bg-gradient-to-r from-violet-700 to-gray-900 text-white rounded-full hover:from-gray-900 hover:to-violet-700 transition-transform transform hover:rotate-2 shadow-lg mr-4" aria-label={`View the project code for ${title} on GitHub`}>
+            <a href={github} target="_blank" class="inline-block px-4 py-2 bg-violet-700 text-white rounded-full hover:bg-violet-600 transition-transform transform hover:scale-105 shadow-lg mr-4" aria-label={`View the project code for ${title} on GitHub`}>
             <span class="flex items-center">
             <img src="/assets/icons/GitHub.svg" alt="GitHub icon" class="w-5 h-5 mr-2" loading="lazy" />
             View on GitHub
@@ -81,7 +81,7 @@ const PROJECTS = [
             </a>
             )}
             {link && (
-            <a href={link} target="_blank" class="inline-block border border-gray-900 px-4 py-2 bg-gradient-to-r from-green-700 to-gray-900 text-white rounded-full hover:from-gray-900 hover:to-green-700 transition-transform transform hover:rotate-2 shadow-lg" aria-label={`Visit the live project ${title}`}>
+            <a href={link} target="_blank" class="inline-block border border-gray-700 px-4 py-2 bg-green-700 text-white rounded-full hover:bg-green-600 transition-transform transform hover:scale-105 shadow-lg" aria-label={`Visit the live project ${title}` }>
             <span class="flex items-center">
             <img src="/assets/icons/Link.svg" alt="Link icon" class="w-5 h-5 mr-2" loading="lazy"/>
             Visit Project
