@@ -71,7 +71,22 @@ import Work from '../components/Work.astro';
           </a>
         </li>
       </ul>
+      <div class="mt-6 flex justify-center">
+        <a 
+          href="/public/docs/CV_ERIC_MOYA_CARMONA.pdf" 
+          download="Eric_Moya_CV.pdf"
+          class="bg-gradient-to-r from-violet-900 to-gray-900 text-white px-6 py-3 rounded-full shadow-lg hover:from-gray-900 hover:to-violet-900 transition-transform transform hover:scale-105 flex items-center gap-2 font-semibold"
+          aria-label="Download Eric's CV"
+        >
+          <img src="/assets/icons/Download.svg" alt="Download icon" class="size-4 md:size-6" />
+          Download CV
+        </a>
+      </div>
+      
     </SectionContainer>
+    
+    <div class="separator"></div>
+
 
     <SectionContainer id="Work-Experience" class="mt-20" role="region" aria-labelledby="work-experience-heading">
       <h2 class="text-2xl font-semibold mb-7 flex items-center gap-3 mt-5" id="work-experience-heading">
@@ -79,8 +94,16 @@ import Work from '../components/Work.astro';
         Work Experience
       </h2>
       <Work />
-      
     </SectionContainer>
+
+    <div class="separator">
+      <svg viewBox="0 0 1440 320">
+        <path fill="rgba(59, 29, 168, 0.2)" fill-opacity="1"
+          d="M0,256L60,240C120,224,240,192,360,192C480,192,600,224,720,234.7C840,245,960,235,1080,202.7C1200,171,1320,117,1380,90.7L1440,64V320H0Z">
+        </path>
+      </svg>
+    </div>
+    
 
     <SectionContainer id="projects" class="mt-20" role="region" aria-labelledby="projects-heading">
       <h2 class="text-2xl font-semibold mb-6 flex items-center gap-3 mt-5" id="projects-heading">
@@ -163,4 +186,9 @@ import Work from '../components/Work.astro';
       });
     }
   </script>
+
+  <style>
+    
+
+  </style>
 </Layout>

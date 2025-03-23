@@ -23,6 +23,7 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
-# Ignorar los componentes Experience.astro y ExperienceItem.astro
-src/components/Experience.astro
-src/components/ExperienceItem.astro
+#Ignore docs folder
+public/docs/
+
+
