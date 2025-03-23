@@ -27,4 +27,4 @@ pnpm-debug.log*
 public/docs/
 
 #Ignore me.webp
-public\assets\icons\me.webp
+public/assets/icons/me.webp
