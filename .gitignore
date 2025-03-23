@@ -25,6 +25,3 @@ pnpm-debug.log*
 
 #Ignore docs folder
 public/docs/
-
-#Ignore me.webp
-public/assets/icons/me.webp
