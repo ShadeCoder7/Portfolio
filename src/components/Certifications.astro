@@ -1,46 +1,48 @@
 ---
 const certifications = [
-  { name:" Web Development with Python", issuer:"IBM", year: 2025 },
+  { name: "Web Development with Python", issuer: "IBM", year: 2025 },
   { name: "Computer Security Auditing", issuer: "MainJobs", year: 2025 },
   { name: "Artificial Intelligence Fundamentals", issuer: "IBM", year: 2024 },
-  { name: "Project Management with Agile Methodologies and Lean Approaches", issuer: "Fundación Telefónica", year: 2024 },
+  { name: "Project Management with Agile Methodologies", issuer: "Fundación Telefónica", year: 2024 },
   { name: "Web Design with HTML5 + CSS", issuer: "Fundación Telefónica", year: 2024 },
-  { name: "Programming with JavaScript", issuer:"Fundación Telefónica", year: 2024},
+  { name: "Programming with JavaScript", issuer: "Fundación Telefónica", year: 2024 },
 ];
+
+const groupedCertifications = certifications.reduce((acc, cert) => {
+  if (!acc[cert.year]) acc[cert.year] = [];
+  acc[cert.year].push(cert);
+  return acc;
+}, {});
+
+const sortedYears = Object.keys(groupedCertifications)
+  .map(Number)
+  .sort((a, b) => b - a);
 ---
 
-<section class="text-xl mt-5" aria-labelledby="certifications-heading">
-    <h2 id="certifications-heading" class="sr-only">Certifications</h2>
-    
-    <div 
-        title="color line" 
-        class="text-2xl font-bold mb-5 text-violet-400 border-b-2 border-violet-400"
-        role="presentation"
-        aria-hidden="true"
-    ></div>
+<section class="mt-16 max-w-5xl mx-auto px-6 lg:px-0" aria-labelledby="certifications-heading">
+    {sortedYears.map((year) => (
+      <div class="mb-12">
+        <h3 class="text-2xl font-bold text-white mb-6 border-l-4 border-violet-900 pl-4">{year}</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {groupedCertifications[year]
+            .sort((a, b) => a.name.localeCompare(b.name))
+            .map((cert) => {
+              const certId = `cert-${cert.name.replace(/\s+/g, '-').toLowerCase()}`;
+              return (
+                <article
+                  class="group relative flex flex-col justify-between bg-gradient-to-br from-violet-900 to-gray-900
+                  rounded-2xl shadow-md hover:shadow-xl p-6 transition-transform transform hover:scale-105 min-h-[120px]"
+                  role="listitem"
+                  aria-labelledby={certId}>
+                  <h4 id={certId} class="text-white font-bold text-md leading-tight">{cert.name}</h4>
+                  <p class="text-violet-400 text-md font-medium">{cert.issuer}</p>
+                  <span class="absolute top-2 right-2 w-3 h-3 bg-violet-400 rounded-full opacity-80 group-hover:scale-125 transition-transform"></span>
+                </article>
+              );
+            })}
+        </div>
+      </div>
+    ))}
+  </section>
+  
 
-    <ul class="list-none text-base space-y-4" aria-labelledby="certifications-list">
-        <h3 id="certifications-list" class="sr-only">List of certifications</h3>
-        {certifications.map(cert => (
-            <li 
-                class="mb-4 p-4 border-transparent rounded-lg shadow-lg"
-                role="listitem" 
-                aria-labelledby={`cert-${cert.name.replace(/\s+/g, '-').toLowerCase()}`}
-            >
-                <div 
-                    id={`cert-${cert.name.replace(/\s+/g, '-').toLowerCase()}`}
-                    class="text-white font-semibold"
-                    aria-label={`Certification name: ${cert.name}`}
-                >
-                    {cert.name}
-                </div>
-                <div 
-                    class="text-violet-400"
-                    aria-label={`Issued by: ${cert.issuer}, Year: ${cert.year}`}
-                >
-                    Issued by {cert.issuer} - {cert.year}
-                </div>
-            </li>
-        ))}
-    </ul>
-</section>
