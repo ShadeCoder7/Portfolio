@@ -24,8 +24,6 @@ const sortedYears = Object.keys(groupedCertifications)
   {sortedYears.map((year) => (
     <div class="mb-12">
       <h3 class="text-2xl font-bold text-white mb-6 border-l-4 border-violet-500 pl-4">{year}</h3>
-
-      {/* Contenedor con role="list" */}
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6" role="list">
         {groupedCertifications[year]
           .sort((a, b) => a.name.localeCompare(b.name))
