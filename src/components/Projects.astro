@@ -9,7 +9,15 @@ const PROJECTS = [
     image: "/Projects-photo/Project-3-photo.webp",
     tags: ["Flutter", "Dart", "ASP.NET Core", "C#", "PostgreSQL", "Firebase"],
   },
-  {},
+  /* Uncomment when the project is ready{
+    title: "Daily Habit RPG – Gamified Habit Tracker Mobile App",
+  description:
+    "Developed a cross-platform Unity application to track daily habits with an RPG-style gamification layer. Built with C#, it features full CRUD habit management, an XP and leveling system, Tamagotchi-inspired avatar progression, achievement unlocking, local data persistence via PlayerPrefs, and pixel-art retro game aesthetics.",
+  link: "",
+  github: "",
+  image: "/Projects-photo/Project-4-habit-photo.webp",
+  tags: ["Unity", "C#"]
+  }, */
   {
     title:
       "Credit Card Fraud Detection - Leveraging Machine Learning for Enhanced Security",
@@ -65,87 +73,87 @@ const PROJECTS = [
 ---
 
 <section class="py-20 px-4 max-w-3xl mx-auto">
-    <div class="flex flex-col gap-12">
-        {
-            PROJECTS.map(({ image, title, description, tags, github, link }) => (
-                <article class="relative bg-gradient-to-br from-violet-950 via-violet-950 to-indigo-900 border border-violet-900/40 rounded-3xl shadow-xl overflow-hidden group hover:scale-[1.025] transition-transform duration-300">
-                    <div class="relative">
-                        {image ? (
-                            <div class="w-full aspect-[16/9] bg-[#1e1b4b] rounded-t-3xl overflow-hidden flex items-center justify-center">
-                                <img
-                                    class="w-full h-full object-contain rounded-t-3xl object-center"
-                                    src={image}
-                                    alt={`Screenshot of the project ${title}`}
-                                    onerror="this.style.display = 'none'"
-                                    loading="lazy"
-                                    aria-label={`Screenshot of the project ${title}`}
-                                    style="background: #1e1b4b;"
-                                />
-                            </div>
-                        ) : (
-                            <div class="w-full h-56 flex items-center justify-center bg-gray-900/60 rounded-t-3xl">
-                                <span class="text-base text-yellow-200 font-semibold">
-                                    Photos coming soon...
-                                </span>
-                            </div>
-                        )}
-                        <div class="absolute top-4 right-4 flex gap-2 z-10">
-                            {github && (
-                                <a
-                                    href={github}
-                                    target="_blank"
-                                    class="bg-violet-700/90 p-2 rounded-full shadow hover:bg-violet-800 transition-colors"
-                                    aria-label={`View the project code for ${title} on GitHub`}
-                                >
-                                    <img
-                                        src="/assets/icons/GitHub.svg"
-                                        alt="GitHub icon"
-                                        class="w-5 h-5"
-                                        loading="lazy"
-                                    />
-                                </a>
-                            )}
-                            {link && (
-                                <a
-                                    href={link}
-                                    target="_blank"
-                                    class="bg-green-700/90 p-2 rounded-full shadow hover:bg-green-800 transition-colors"
-                                    aria-label={`Visit the live project ${title}`}
-                                >
-                                    <img
-                                        src="/assets/icons/Link.svg"
-                                        alt="Link icon"
-                                        class="w-5 h-5"
-                                        loading="lazy"
-                                    />
-                                </a>
-                            )}
-                        </div>
-                    </div>
-                    <div class="p-8 flex flex-col h-full bg-gradient-to-b from-violet-950/80 via-violet-900/90 to-indigo-950/80">
-                        <h3 class="text-2xl font-extrabold text-violet-400 mb-2 group-hover:text-yellow-300 transition-colors tracking-wide drop-shadow">
-                            {title}
-                        </h3>
-                        <hr class="border-violet-700 mb-4" />
-                        <p class="text-white mb-6 text-base font-medium italic">
-                            {description}
-                        </p>
-                        <div>
-                            <span class="block text-sm font-bold text-yellow-300 mb-2 uppercase tracking-wider">
-                                Technologies:
-                            </span>
-                            <ul class="flex flex-wrap gap-2 mb-2">
-                                {Array.isArray(tags) &&
-                                    tags.map((tag) => (
-                                        <li class="bg-indigo-600/20 border border-indigo-400/40 rounded-full px-3 py-1 text-indigo-200 text-xs font-semibold shadow hover:bg-indigo-500/40 transition">
-                                            {tag}
-                                        </li>
-                                    ))}
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-            ))
-        }
-    </div>
+  <div class="flex flex-col gap-12">
+    {
+      PROJECTS.map(({ image, title, description, tags, github, link }) => (
+        <article class="relative bg-gradient-to-br from-violet-950 via-violet-950 to-indigo-900 border border-violet-900/40 rounded-3xl shadow-xl overflow-hidden group hover:scale-[1.025] transition-transform duration-300">
+          <div class="relative">
+            {image ? (
+              <div class="w-full aspect-[16/9] bg-[#1e1b4b] rounded-t-3xl overflow-hidden flex items-center justify-center">
+                <img
+                  class="w-full h-full object-contain rounded-t-3xl object-center"
+                  src={image}
+                  alt={`Screenshot of the project ${title}`}
+                  onerror="this.style.display = 'none'"
+                  loading="lazy"
+                  aria-label={`Screenshot of the project ${title}`}
+                  style="background: #1e1b4b;"
+                />
+              </div>
+            ) : (
+              <div class="w-full h-56 flex items-center justify-center bg-gray-900/60 rounded-t-3xl">
+                <span class="text-base text-yellow-200 font-semibold">
+                  Photos coming soon...
+                </span>
+              </div>
+            )}
+            <div class="absolute top-4 right-4 flex gap-2 z-10">
+              {github && (
+                <a
+                  href={github}
+                  target="_blank"
+                  class="bg-violet-700/90 p-2 rounded-full shadow hover:bg-violet-800 transition-colors"
+                  aria-label={`View the project code for ${title} on GitHub`}
+                >
+                  <img
+                    src="/assets/icons/GitHub.svg"
+                    alt="GitHub icon"
+                    class="w-5 h-5"
+                    loading="lazy"
+                  />
+                </a>
+              )}
+              {link && (
+                <a
+                  href={link}
+                  target="_blank"
+                  class="bg-green-700/90 p-2 rounded-full shadow hover:bg-green-800 transition-colors"
+                  aria-label={`Visit the live project ${title}`}
+                >
+                  <img
+                    src="/assets/icons/Link.svg"
+                    alt="Link icon"
+                    class="w-5 h-5"
+                    loading="lazy"
+                  />
+                </a>
+              )}
+            </div>
+          </div>
+          <div class="p-8 flex flex-col h-full bg-gradient-to-b from-violet-950/80 via-violet-900/90 to-indigo-950/80">
+            <h3 class="text-2xl font-extrabold text-violet-400 mb-2 group-hover:text-yellow-300 transition-colors tracking-wide drop-shadow">
+              {title}
+            </h3>
+            <hr class="border-violet-700 mb-4" />
+            <p class="text-white mb-6 text-base font-medium italic">
+              {description}
+            </p>
+            <div>
+              <span class="block text-sm font-bold text-yellow-300 mb-2 uppercase tracking-wider">
+                Technologies:
+              </span>
+              <ul class="flex flex-wrap gap-2 mb-2">
+                {Array.isArray(tags) &&
+                  tags.map((tag) => (
+                    <li class="bg-indigo-600/20 border border-indigo-400/40 rounded-full px-3 py-1 text-indigo-200 text-xs font-semibold shadow hover:bg-indigo-500/40 transition">
+                      {tag}
+                    </li>
+                  ))}
+              </ul>
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
 </section>
