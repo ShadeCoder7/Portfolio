@@ -22,63 +22,110 @@ const hardSkills = [
     { name: "Django", icon: "/assets/icons/Django.svg", percentage: 65 },
     { name: "MySQL", icon: "/assets/icons/MySQL.svg", percentage: 80 },
     { name: "PostgreSQL", icon: "/assets/icons/PostgreSQL.svg", percentage: 70 },
-    
 ];
 ---
 
-<section class="text-xl" aria-labelledby="skills-section">
-    <h2 id="skills-section" class="sr-only">Skills Section</h2>
-
-    <p class="mb-5" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
-        Hello, I'm <strong class="text-violet-400">Eric</strong>, a passionate and dedicated <strong class="text-violet-400">student</strong> specializing in <strong class="text-violet-400">Cross-Platform Application Development</strong>. With a strong foundation in both <strong class="text-violet-400">web development</strong> and <strong class="text-violet-400">machine learning</strong>, I am constantly exploring and adopting new <strong class="text-violet-400">technologies</strong> to enhance my skill set. I thrive on the challenge of creating <strong class="text-violet-400">efficient</strong>, <strong class="text-violet-400">scalable</strong>, and <strong class="text-violet-400">user-friendly</strong> applications, and I am committed to continuously refining my abilities through hands-on projects.
-    </p>
-    <p class="mb-5" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
-        Although I am currently pursuing my formal education, I am also an avid <strong class="text-violet-400">self-learner</strong>, constantly seeking to expand my knowledge and skills beyond the classroom. This dual approach allows me to stay ahead of the curve and adapt to the ever-changing tech landscape.
-    </p>
-    <p class="mb-20" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);">
-        In my free time, I enjoy engaging in <strong class="text-violet-400">video games</strong> and <strong class="text-violet-400">cinema</strong>, activities that fuel my creativity and help me maintain a healthy balance between my professional and personal life. I am also a huge animal lover, and I take great joy in helping animals I find on the streets by finding them a loving home. I have two cats, <strong class="text-violet-400">Loki</strong> and <strong class="text-violet-400">Wanda</strong>, who are a big part of my life.
-    </p>
-    
-    <div class="flex flex-col md:flex-row justify-between mt-10 space-y-6 md:space-y-0">
-        <div class="w-full md:w-1/2 pr-0 md:pr-4">
-            <h3 class="text-xl font-bold mb-3 text-violet-400 border-b-2 border-violet-400 animate-pulse" id="soft-skills-heading">
-                Soft Skills
-            </h3>
-            <ul class="list-none list-inside text-base space-y-4" aria-labelledby="soft-skills-heading">
-                {softSkills.map(skill => (
-                    <li class="mb-4" role="listitem" aria-labelledby={`soft-skill-${skill.name.replace(/\s+/g, '-').toLowerCase()}`}>
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="text-white" id={`soft-skill-${skill.name.replace(/\s+/g, '-').toLowerCase()}`}>{skill.name}</span>
-                            <span class="text-white">{skill.percentage}%</span>
-                        </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5" aria-live="polite">
-                            <div class="bg-green-400 h-2.5 rounded-full" style={{ width: `${skill.percentage}%` }}></div>
-                        </div>
-                    </li>
-                ))}
-            </ul>
+<section class="max-w-5xl mx-auto px-4">
+    <div class="relative flex flex-col items-center mb-12">
+        <div class="relative z-10 max-w-2xl px-8 py-10 space-y-5">
+            <h2 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-violet-300 via-purple-400 to-violet-900 mb-2 drop-shadow-lg text-center animate-bounce">
+                Hi! I'm Eric 👋
+            </h2>
+            <p class="text-lg md:text-xl text-gray-100 leading-relaxed font-medium text-justify">
+                Before anything else, I am passionate about <span class="font-semibold text-violet-300">Multiplatform Development</span>. I enjoy creating efficient, scalable, and user-friendly applications.
+            </p>
+            <p class="text-lg md:text-xl text-gray-100 leading-relaxed font-medium text-justify">
+                I'm also <span class="font-semibold text-purple-300">self-taught</span>, and I hold a <span class="font-semibold text-violet-300">Grado Superior en Desarrollo de Aplicaciones Multiplataforma (DAM)</span> in Spain, which means I'm a higher technician in multiplatform application development. On one hand, I always strive to go beyond the classroom, learning new technologies and facing challenges with enthusiasm.
+            </p>
+            <p class="text-lg md:text-xl text-gray-100 leading-relaxed font-medium text-justify">
+                After finishing my current studies, I will begin my journey in <span class="font-semibold text-violet-300">Computer Engineering</span>. I am highly motivated to keep learning about technology and new things that I can apply in my daily life, and that can help me create real solutions to real problems.
+            </p>
+            <p class="text-lg md:text-xl text-gray-100 leading-relaxed font-medium text-justify">
+                Besides my academic interests, I love playing video games and going out to eat. Additionally, I'm part of a group that helps abandoned animals find good homes.
+            </p>
+            <p class="text-lg md:text-xl text-gray-100 leading-relaxed font-medium text-justify mb-0">
+                My cats <span class="font-semibold text-fuchsia-300">Loki</span> and <span class="font-semibold text-fuchsia-300">Wanda</span> are always by my side 🐾.
+            </p>
         </div>
-        
-        <div class="w-full md:w-1/2 pl-0 md:pl-4">
-            <h3 class="text-xl font-bold mb-3 text-violet-400 border-b-2 border-violet-400 animate-pulse" id="technical-skills-heading">
+        <div class="flex gap-6 mt-6 z-10">
+            <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-fuchsia-400 to-violet-600 text-white text-2xl shadow-lg animate-spin-slow">🎮</span>
+            <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-violet-400 text-white text-2xl shadow-lg animate-wiggle">🎬</span>
+            <span class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-violet-400 to-fuchsia-400 text-white text-2xl shadow-lg animate-bounce">🐱</span>
+        </div>
+    </div>
+    <style>
+        @keyframes spin-slow {
+            0% { transform: rotate(0deg);}
+            100% { transform: rotate(360deg);}
+        }
+        .animate-spin-slow {
+            animation: spin-slow 6s linear infinite;
+        }
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-8deg);}
+            50% { transform: rotate(8deg);}
+        }
+        .animate-wiggle {
+            animation: wiggle 1.5s ease-in-out infinite;
+        }
+    </style>
+
+    <hr class="my-10 border-violet-700 rounded-full" />
+
+    <div class="grid grid-cols-1 gap-2">
+        <div>
+            <h3 class="text-2xl font-bold mb-6 flex items-center gap-2 text-violet-400 drop-shadow-lg animate-pulse">
                 Technical Skills
             </h3>
-            <ul class="list-none list-inside text-base space-y-4" aria-labelledby="technical-skills-heading">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {hardSkills.map(skill => (
-                    <li class="mb-4" role="listitem" aria-labelledby={`tech-skill-${skill.name.replace(/\s+/g, '-').toLowerCase()}`}>
-                        <div class="flex justify-between items-center mb-2">
-                            <div class="flex items-center">
-                                <img src={skill.icon} alt={`${skill.name} icon`} class="w-8 h-8 mr-2 rounded-sm" loading="lazy"/>
-                                <span class="text-white" id={`tech-skill-${skill.name.replace(/\s+/g, '-').toLowerCase()}`}>{skill.name}</span>
-                            </div>
-                            <span class="text-white">{skill.percentage}%</span>
+                    <div class="flex flex-col items-center bg-gradient-to-br from-violet-900 to-gray-900 rounded-2xl p-6 shadow-md border-2 border-gray-800/40">
+                        <img src={skill.icon} alt={`${skill.name} icon`} class="w-10 h-10 mb-2" loading="lazy"/>
+                        <span class="text-lg font-bold text-white mb-1">{skill.name}</span>
+                        <div class="w-full h-2 bg-gray-700 rounded-full overflow-hidden mb-2">
+                            <div class="h-full bg-green-400 rounded-full" style={{ width: `${skill.percentage}%` }}></div>
                         </div>
-                        <div class="w-full bg-gray-700 rounded-full h-2.5" aria-live="polite">
-                            <div class="bg-green-400 h-2.5 rounded-full" style={{ width: `${skill.percentage}%` }}></div>
-                        </div>
-                    </li>
+                        <span class="text-sm font-semibold text-green-300">{skill.percentage}%</span>
+                    </div>
                 ))}
-            </ul>
+            </div>
+        </div>
+
+        <hr class="my-10 border-violet-700 rounded-full" />
+
+        <div>
+            <h3 class="text-2xl font-bold mb-6 flex items-center gap-2 text-violet-400 drop-shadow-lg animate-pulse">
+                Soft Skills
+            </h3>
+            <div class="flex flex-wrap gap-6 justify-center">
+                {softSkills.map(skill => (
+                    <div class="flex flex-col items-center bg-gradient-to-br from-violet-900 to-gray-900 rounded-full px-8 py-6 shadow-md border-2 border-gray-800/40 min-w-[140px]">
+                        <span class="text-lg font-bold text-white mb-2">{skill.name}</span>
+                        <div class="relative w-20 h-20 mb-2">
+                            <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 36 36">
+                                <path
+                                    class="text-gray-700"
+                                    stroke="currentColor"
+                                    stroke-width="4"
+                                    fill="none"
+                                    d="M18 2a16 16 0 1 1 0 32 16 16 0 1 1 0-32"
+                                />
+                                <path
+                                    class="text-green-400"
+                                    stroke="currentColor"
+                                    stroke-width="4"
+                                    fill="none"
+                                    stroke-linecap="round"
+                                    stroke-dasharray="100"
+                                    stroke-dashoffset={100 - skill.percentage}
+                                    d="M18 2a16 16 0 1 1 0 32 16 16 0 1 1 0-32"
+                                />
+                            </svg>
+                            <span class="absolute inset-0 flex items-center justify-center text-xl font-bold text-green-300">{skill.percentage}%</span>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
     </div>
 </section>
