@@ -13,261 +13,263 @@ import Work from "../components/Work.astro";
   description="Discover the portfolio of Eric, an innovative developer specializing in Machine Learning and Cross-Platform Application Development. Explore projects, skills, and connect with Eric for potential opportunities."
 >
   <main class="flex flex-col items-center justify-center w-full">
-    <SectionContainer id="top" class="pt-36 pb-24 flex flex-col items-center justify-center text-center relative">
+    <SectionContainer
+      id="top"
+      class="pt-24 md:pt-52 pb-32 flex flex-col items-center justify-center text-center relative"
+    >
       <div class="flex flex-col-reverse md:flex-row items-center gap-14 w-full max-w-4xl mx-auto z-10">
-      <!-- Left side: Text and buttons -->
+      {/* Left side: Text and buttons */}
       <div class="flex-1 flex flex-col items-center md:items-start md:text-left text-center">
-        <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight text-white drop-shadow-xl relative">
-            <span class="relative inline-block">
-              <span class="block text-6xl md:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-violet-500 to-fuchsia-400 bg-clip-text text-transparent animate-gradient-x drop-shadow-lg">
-                Eric Moya
-              </span>
-            </span>
-            </span>
-        </h1>
-        <div class="flex items-center gap-3 mb-10">
-        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/10 border border-violet-600 text-violet-200 shadow-md">
-          <svg class="w-4 h-4 mr-1 text-violet-400" fill="currentColor" viewBox="0 0 20 20">
-          <path d="M10 2a6 6 0 016 6c0 4.418-6 10-6 10S4 12.418 4 8a6 6 0 016-6zm0 8a2 2 0 100-4 2 2 0 000 4z"/>
-          </svg>
-          Seville, Spain
+      <h1 class="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight text-white drop-shadow-xl relative">
+      <span class="relative inline-block">
+        <span class="block text-6xl md:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-blue-400 via-violet-500 to-fuchsia-400 bg-clip-text text-transparent animate-gradient-x drop-shadow-lg">
+        Eric Moya
         </span>
-        </div>
-        <h2 class="text-2xl md:text-3xl font-bold mb-2 drop-shadow bg-gradient-to-r from-violet-400 via-violet-500 to-violet-700 bg-clip-text text-transparent animate-gradient-x">
-        Software &amp; Mobile Developer
-        </h2>
-        <p class="text-lg md:text-xl text-violet-100 mb-6 max-w-2xl transition-colors duration-500 hover:text-violet-200">
-        Passionate about creating innovative solutions with a focus on
-        <span class="bg-gradient-to-r from-violet-400 to-violet-700 bg-clip-text text-transparent font-semibold">AI</span>
-        and Cross-Platform Application Development.
-        </p>
-        <div class="flex gap-4 flex-wrap justify-center md:justify-start mb-4 mt-5">
-        <a
-          href="https://www.linkedin.com/in/eric-moya-carmona"
-          target="_blank"
-          class="flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-700 hover:to-blue-500 text-white shadow-lg transition-transform hover:scale-110 font-semibold animate-gradient-x"
-          aria-label="Visit Eric's LinkedIn profile"
-        >
-          <img src="/assets/icons/LinkedIn.svg" alt="LinkedIn" class="size-5" style="filter: none;" />
-          LinkedIn
-        </a>
-        <a
-          href="https://github.com/ShadeCoder7"
-          target="_blank"
-          class="flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-gray-700 to-gray-500 hover:from-gray-800 hover:to-gray-600 text-gray-100 hover:text-white shadow-lg transition-transform hover:scale-110 font-semibold"
-          aria-label="Visit Eric's GitHub profile"
-        >
-          <img src="/assets/icons/GitHub.svg" alt="GitHub" class="size-5" style="filter: none;" />
-          GitHub
-        </a>
-        <a
-          href="mailto:ericmoyacarmona7@gmail.com"
-          class="flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-green-600 to-green-400 hover:from-green-700 hover:to-green-500 text-white shadow-lg transition-transform hover:scale-110 font-semibold animate-gradient-x"
-          aria-label="Send an email to Eric"
-        >
-          <img src="/assets/icons/Mail.svg" alt="Mail" class="size-5" style="filter: none;" />
-          Email
-        </a>
-        <a
-          href="/assets/docs/CV_ERIC_MOYA_CARMONA_EN.pdf"
-          download
-          class="flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-gray-700 via-violet-800 to-violet-600 hover:from-violet-700 hover:to-violet-500 text-white shadow-lg transition-transform hover:scale-110 font-semibold animate-gradient-x"
-          aria-label="Download Eric's CV"
-        >
-          <img src="/assets/icons/Download.svg" alt="Download CV" class="size-8" />
-          Download CV
-        </a>
-        </div>
+      </span>
+      </h1>
+      <div class="flex items-center gap-3 mb-8">
+      <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-white/10 border border-violet-600 text-violet-200 shadow-md">
+        <svg class="w-4 h-4 mr-1 text-violet-400" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M10 2a6 6 0 016 6c0 4.418-6 10-6 10S4 12.418 4 8a6 6 0 016-6zm0 8a2 2 0 100-4 2 2 0 000 4z"></path>
+        </svg>
+        Seville, Spain
+      </span>
       </div>
-      <!-- Right side: Avatar with Open to Work badge -->
+      <h2 class="text-2xl md:text-3xl font-bold mb-2 drop-shadow bg-gradient-to-r from-violet-400 via-violet-500 to-violet-700 bg-clip-text text-transparent animate-gradient-x">
+      Software &amp; Mobile Developer
+      </h2>
+      <p class="text-lg md:text-xl text-violet-100 mb-6 max-w-2xl transition-colors duration-500 hover:text-violet-200">
+      Passionate about creating innovative solutions with a focus on
+      <span class="bg-gradient-to-r from-violet-400 to-violet-700 bg-clip-text text-transparent font-semibold">AI</span>
+      and Cross-Platform Application Development.
+      </p>
+      <div class="flex gap-4 flex-wrap justify-center md:justify-start mb-4 mt-2">
+      <a
+        href="https://www.linkedin.com/in/eric-moya-carmona"
+        target="_blank"
+        class="flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-blue-600 to-blue-400 hover:from-blue-700 hover:to-blue-500 text-white shadow-lg transition-transform hover:scale-110 font-semibold animate-gradient-x"
+        aria-label="Visit Eric's LinkedIn profile"
+      >
+        <img src="/assets/icons/LinkedIn.svg" alt="LinkedIn" class="size-5" style="filter: none;" />
+        LinkedIn
+      </a>
+      <a
+        href="https://github.com/ShadeCoder7"
+        target="_blank"
+        class="flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-gray-700 to-gray-500 hover:from-gray-800 hover:to-gray-600 text-gray-100 hover:text-white shadow-lg transition-transform hover:scale-110 font-semibold"
+        aria-label="Visit Eric's GitHub profile"
+      >
+        <img src="/assets/icons/GitHub.svg" alt="GitHub" class="size-5" style="filter: none;" />
+        GitHub
+      </a>
+      <a
+        href="mailto:ericmoyacarmona7@gmail.com"
+        class="flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-green-600 to-green-400 hover:from-green-700 hover:to-green-500 text-white shadow-lg transition-transform hover:scale-110 font-semibold animate-gradient-x"
+        aria-label="Send an email to Eric"
+      >
+        <img src="/assets/icons/Mail.svg" alt="Mail" class="size-5" style="filter: none;" />
+        Email
+      </a>
+      </div>
+      <div class="flex justify-center w-full pr-2 mt-6 md:pr-0">
+      <a
+        href="https://drive.google.com/uc?export=download&id=1NwPTcCTJ0ww---is9_HItv19c41sF8ka"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-2 px-5 py-2 rounded-full bg-gradient-to-r from-gray-700 via-violet-800 to-violet-600 hover:from-violet-700 hover:to-violet-500 text-white shadow-lg transition-transform hover:scale-110 font-semibold animate-gradient-x"
+        aria-label="Download Eric's CV"
+      >
+        <img src="/assets/icons/Download.svg" alt="Download CV" class="size-8" />
+        Download CV
+      </a>
+      </div>
+      </div>
+      {/* Right side: Avatar with Open to Work badge */}
       <div class="relative w-44 h-44 md:w-60 md:h-60 flex-shrink-0 flex items-center justify-center group self-center md:self-start mt-2 md:mt-6">
-        <!-- Animated border for avatar and badge -->
-        <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-violet-800 via-violet-600 to-violet-400 blur-2xl opacity-90 animate-gradient-x group-hover:scale-105 transition-transform duration-500"></div>
-        <img
-        src="/assets/icons/me.webp"
-        alt="Portrait of Eric, Software Developer"
-        class="relative rounded-full w-full h-full object-cover shadow-2xl border-2 border-white group-hover:scale-105 transition-transform duration-500 z-10"
-        />
-        <!-- Open to Work badge -->
-        <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex items-center justify-center z-20">
-        <span
-          class="flex items-center gap-2 px-4 py-1 rounded-full text-xs font-bold shadow-md border-2 border-white bg-gradient-to-r from-violet-400 to-violet-700 text-white animate-gradient-x group-hover:scale-105 transition-transform duration-500"
-          style="box-shadow: 0 4px 16px 0 rgba(139,92,246,0.18);"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <circle cx="12" cy="12" r="10" fill="#7c3aed"/>
-          <path stroke="#fff" stroke-width="2" d="M8 12l2 2 4-4"/>
-          </svg>
-          Open to Work
-        </span>
-        </div>
-      </div>
-      </div>
-    </SectionContainer>
-
-    <div class="separator"></div>
-
-    <SectionContainer
-      id="Work-Experience"
-      class="mt-20"
-      role="region"
-      aria-labelledby="work-experience-heading"
-    >
-      <h2
-        class="text-2xl font-semibold mb-7 flex items-center gap-3 mt-5"
-        id="work-experience-heading"
+      {/* Animated border for avatar and badge */}
+      <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-violet-800 via-violet-600 to-violet-400 blur-2xl opacity-90 animate-gradient-x group-hover:scale-105 transition-transform duration-500"></div>
+      <img
+      src="/assets/icons/me.webp"
+      alt="Portrait of Eric, Software Developer"
+      class="relative rounded-full w-full h-full object-cover shadow-2xl border-2 border-white group-hover:scale-105 transition-transform duration-500 z-10"
+      />
+      {/* Open to Work badge */}
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex items-center justify-center z-20">
+      <span
+        class="flex items-center gap-2 px-4 py-1 rounded-full text-xs font-bold shadow-md border-2 border-white bg-gradient-to-r from-violet-400 to-violet-700 text-white animate-gradient-x group-hover:scale-105 transition-transform duration-500"
+        style="box-shadow: 0 4px 16px 0 rgba(139,92,246,0.18);"
       >
-        <img
-          src="/assets/icons/Job.svg"
-          alt="Job icon"
-          class="size-7 animate-bounce"
-        />
-        Work Experience
-      </h2>
-      <Work />
-    </SectionContainer>
-
-    <div class="separator">
-      <svg viewBox="0 0 1440 320">
-        <path
-          fill="rgba(59, 29, 168, 0.2)"
-          fill-opacity="1"
-          d="M0,256L60,240C120,224,240,192,360,192C480,192,600,224,720,234.7C840,245,960,235,1080,202.7C1200,171,1320,117,1380,90.7L1440,64V320H0Z"
-        >
-        </path>
-      </svg>
-    </div>
-
-    <SectionContainer
-      id="projects"
-      class="mt-20"
-      role="region"
-      aria-labelledby="projects-heading"
-    >
-      <h2
-        class="text-2xl font-semibold mb-6 flex items-center gap-3 mt-5"
-        id="projects-heading"
-      >
-        <img
-          src="/assets/icons/ProjectH.svg"
-          alt="Projects icon"
-          class="size-7 animate-bounce"
-          loading="lazy"
-        />
-        Projects
-      </h2>
-      <Projects />
-      <div class="text-center mt-8">
-        <button
-          class="bg-gradient-to-r from-violet-600 to-gray-900 text-white px-8 py-3 rounded-full shadow-lg hover:from-gray-900 hover:to-violet-600 transition-transform transform hover:scale-105 font-semibold"
-          id="showModalButton"
-          aria-label="View more projects"
-        >
-          See More Projects
-        </button>
-        <div
-          id="modal"
-          class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 invisible transition-opacity duration-300"
-          role="dialog"
-          aria-labelledby="modal-title"
-          aria-hidden="true"
-        >
-          <div
-            class="bg-white rounded-lg shadow-lg p-8 max-w-md text-center transform transition-transform duration-300 scale-95"
-          >
-            <h2 id="modal-title" class="text-3xl font-bold mb-4 text-gray-800">
-              More Projects Coming Soon!
-            </h2>
-            <p class="text-gray-600 mb-6">
-              Stay tuned for more updates on exciting projects that I'm working
-              on. Thank you for your interest!
-            </p>
-            <button
-              class="bg-gradient-to-r from-violet-600 to-gray-900 text-white px-6 py-2 rounded-full shadow-lg hover:from-gray-900 hover:to-violet-600 transition-transform transform hover:scale-105"
-              id="closeModalButton"
-              aria-label="Close modal"
-            >
-              Close
-            </button>
-          </div>
-        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <circle cx="12" cy="12" r="10" fill="#7c3aed"></circle>
+        <path stroke="#fff" stroke-width="2" d="M8 12l2 2 4-4"></path>
+        </svg>
+        Open to Work
+      </span>
       </div>
-    </SectionContainer>
-
-    <SectionContainer id="certifications" class="mt-20">
-      <h2 class="text-2xl font-semibold mb-6 flex items-center gap-3 mt-5">
-        <img
-          src="/assets/icons/CertificationH.svg"
-          alt="Certifications icon"
-          class="size-7 animate-bounce"
-          loading="lazy"
-        />
-        Certifications
-      </h2>
-      <Certifications />
-    </SectionContainer>
-
-    <SectionContainer id="about" class="mt-20">
-      <h2 class="text-2xl font-semibold mb-6 flex items-center gap-3 mt-5">
-        <img
-          src="/assets/icons/About.svg"
-          alt="About icon"
-          class="size-7 animate-bounce"
-          loading="lazy"
-        />
-        About
-      </h2>
-      <About />
-    </SectionContainer>
-
-    <SectionContainer id="contact" class="mt-20 mb-20">
-      <h2 class="text-2xl font-semibold mb-6 flex items-center gap-3 mt-5">
-        <img
-          src="/assets/icons/Contact.svg"
-          alt="Contact icon"
-          class="size-7 animate-bounce"
-          loading="lazy"
-        />
-        Contact
-      </h2>
-      <Contact />
+      </div>
+      </div>
     </SectionContainer>
   </main>
 
-  <script>
-    const showModalButton = document.getElementById("showModalButton");
-    if (showModalButton) {
-      showModalButton.addEventListener("click", function () {
-        const modal = document.getElementById("modal");
-        if (modal) {
-          modal.classList.remove("opacity-0", "invisible");
-          modal.classList.add("opacity-100", "visible");
-          modal.setAttribute("aria-hidden", "false");
-        }
-      });
-    }
+  <div class="separator"></div>
 
-    const closeModalButton = document.getElementById("closeModalButton");
-    if (closeModalButton) {
-      closeModalButton.addEventListener("click", function () {
-        const modal = document.getElementById("modal");
-        if (modal) {
-          modal.classList.remove("opacity-100", "visible");
-          modal.classList.add("opacity-0", "invisible");
-          modal.setAttribute("aria-hidden", "true");
-        }
-      });
-    }
-  </script>
+  <SectionContainer
+    id="Work-Experience"
+    class="mt-20"
+    role="region"
+    aria-labelledby="work-experience-heading"
+  >
+    <h2
+      class="text-2xl font-semibold mb-7 flex items-center gap-3 mt-5"
+      id="work-experience-heading"
+    >
+      <img
+        src="/assets/icons/Job.svg"
+        alt="Job icon"
+        class="size-7 animate-bounce"
+      />
+      Work Experience
+    </h2>
+    <Work />
+  </SectionContainer>
 
-  <style>
-      @keyframes gradient-x {
-      0%, 100% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      }
-      .animate-gradient-x {
-      background-size: 200% 200%;
-      animation: gradient-x 4s ease-in-out infinite;
-      }
-  </style>
+  <div class="separator">
+  </div>
+
+  <SectionContainer
+    id="projects"
+    class="mt-20"
+    role="region"
+    aria-labelledby="projects-heading"
+  >
+    <h2
+      class="text-2xl font-semibold mb-6 flex items-center gap-3 mt-5"
+      id="projects-heading"
+    >
+      <img
+        src="/assets/icons/ProjectH.svg"
+        alt="Projects icon"
+        class="size-7 animate-bounce"
+        loading="lazy"
+      />
+      Projects
+    </h2>
+    <Projects />
+    <div class="text-center mt-8">
+      <button
+        class="bg-gradient-to-r from-violet-600 to-gray-900 text-white px-8 py-3 rounded-full shadow-lg hover:from-gray-900 hover:to-violet-600 transition-transform transform hover:scale-105 font-semibold"
+        id="showModalButton"
+        aria-label="View more projects"
+      >
+        See More Projects
+      </button>
+      <div
+        id="modal"
+        class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 invisible transition-opacity duration-300"
+        role="dialog"
+        aria-labelledby="modal-title"
+        aria-hidden="true"
+      >
+        <div
+          class="bg-white rounded-lg shadow-lg p-8 max-w-md text-center transform transition-transform duration-300 scale-95"
+        >
+          <h2 id="modal-title" class="text-3xl font-bold mb-4 text-gray-800">
+            More Projects Coming Soon!
+          </h2>
+          <p class="text-gray-600 mb-6">
+            Stay tuned for more updates on exciting projects that I'm working
+            on. Thank you for your interest!
+          </p>
+          <button
+            class="bg-gradient-to-r from-violet-600 to-gray-900 text-white px-6 py-2 rounded-full shadow-lg hover:from-gray-900 hover:to-violet-600 transition-transform transform hover:scale-105"
+            id="closeModalButton"
+            aria-label="Close modal"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </SectionContainer>
+
+  <SectionContainer id="certifications" class="mt-20">
+    <h2 class="text-2xl font-semibold mb-6 flex items-center gap-3 mt-5">
+      <img
+        src="/assets/icons/CertificationH.svg"
+        alt="Certifications icon"
+        class="size-7 animate-bounce"
+        loading="lazy"
+      />
+      Certifications
+    </h2>
+    <Certifications />
+  </SectionContainer>
+
+  <SectionContainer id="about" class="mt-20">
+    <h2 class="text-2xl font-semibold mb-6 flex items-center gap-3 mt-5">
+      <img
+        src="/assets/icons/About.svg"
+        alt="About icon"
+        class="size-7 animate-bounce"
+        loading="lazy"
+      />
+      About
+    </h2>
+    <About />
+  </SectionContainer>
+
+  <SectionContainer id="contact" class="mt-20 mb-20">
+    <h2 class="text-2xl font-semibold mb-6 flex items-center gap-3 mt-5">
+      <img
+        src="/assets/icons/Contact.svg"
+        alt="Contact icon"
+        class="size-7 animate-bounce"
+        loading="lazy"
+      />
+      Contact
+    </h2>
+    <Contact />
+  </SectionContainer>
 </Layout>
+
+<script>
+  const showModalButton = document.getElementById("showModalButton");
+  if (showModalButton) {
+    showModalButton.addEventListener("click", function () {
+      const modal = document.getElementById("modal");
+      if (modal) {
+        modal.classList.remove("opacity-0", "invisible");
+        modal.classList.add("opacity-100", "visible");
+        modal.setAttribute("aria-hidden", "false");
+      }
+    });
+  }
+
+  const closeModalButton = document.getElementById("closeModalButton");
+  if (closeModalButton) {
+    closeModalButton.addEventListener("click", function () {
+      const modal = document.getElementById("modal");
+      if (modal) {
+        modal.classList.remove("opacity-100", "visible");
+        modal.classList.add("opacity-0", "invisible");
+        modal.setAttribute("aria-hidden", "true");
+      }
+    });
+  }
+</script>
+
+<style>
+  @keyframes gradient-x {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  .animate-gradient-x {
+    background-size: 200% 200%;
+    animation: gradient-x 4s ease-in-out infinite;
+  }
+</style>
