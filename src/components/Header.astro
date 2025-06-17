@@ -31,8 +31,6 @@
     </nav>
 </header>
 
-
-
 <style>
     a::before {
         content: '';
@@ -79,6 +77,7 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const header = document.getElementById("main-header");
+    const SCROLL_ADJUST = -12; // Ajusta este valor para centrar mejor la sección
 
     document.querySelectorAll(".nav-link").forEach((link) => {
         link.addEventListener("click", function (event) {
@@ -90,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             const headerOffset = header.offsetHeight;
             const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-            const offsetPosition = elementPosition - headerOffset;
+            const offsetPosition = elementPosition - headerOffset + SCROLL_ADJUST;
 
             window.scrollTo({
                 top: offsetPosition,
