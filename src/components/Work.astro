@@ -1,30 +1,123 @@
 ---
 const jobs = [
   {
-    title: "Software Developer Intern",
+    title: "Software & Mobile App Developer Intern",
     company: "CodeArts Solutions S.L.",
-    date: "March 2025 - June 2025",
-    description: "Currently completing my DAM internship at CodeArts Solutions S.L., gaining experience in cross-platform development."
-  }
+    date: "Mar 2025 – Jun 2025",
+    description: [
+      "Enhanced DPTelemetry app UI and features (C#, Unity, PostgreSQL).",
+      "API testing, bug fixing, and GitHub documentation.",
+      "Supported banking systems and web app foundations.",
+    ],
+  },
 ];
 ---
 
-<section class="relative max-w-3xl px-6 ml-0">
-  {jobs.map((job) => (
-    <div class="bg-gray-900 p-6 rounded-lg shadow-lg border border-violet-500/30 mb-6 transition-all hover:shadow-violet-500/50 hover:border-violet-500 animate-fade-in">
-      <h3 class="text-white font-bold text-lg">{job.title}</h3>
-      <p class="text-violet-400 font-medium">{job.company} - {job.date}</p>
-      <p class="text-gray-300 text-sm mt-2">{job.description}</p>
-    </div>
-  ))}
+<section class="work-section-alt">
+  <div class="work-list-alt">
+    {
+      jobs.map((job) => (
+        <div class="work-card-alt">
+          <div class="work-card-side"></div>
+          <div class="work-card-content">
+            <div class="work-card-header-alt">
+              <span class="work-card-title-alt">{job.title}</span>
+              <span class="work-card-date-alt">{job.date}</span>
+            </div>
+            <div class="work-card-company-alt">{job.company}</div>
+            <ul class="work-card-description-alt">
+              {job.description.map(line => (
+                <li>{line}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))
+    }
+  </div>
 </section>
 
 <style>
-@keyframes fade-in {
-  from { opacity: 0; transform: translateY(10px); }
-  to { opacity: 1; transform: translateY(0); }
+.work-section-alt {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 0 1.5rem;
 }
-.animate-fade-in {
-  animation: fade-in 0.5s ease-out;
+.work-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #6366f1;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+.work-list-alt {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.work-card-alt {
+  display: flex;
+  background: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 4px 24px 0 #6366f122;
+  overflow: hidden;
+  border-left: 8px solid #6366f1;
+  transition: box-shadow 0.2s;
+}
+.work-card-alt:hover {
+  box-shadow: 0 8px 32px 0 #6366f144;
+}
+.work-card-side {
+  width: 8px;
+  background: linear-gradient(180deg, #6366f1 0%, #a78bfa 100%);
+}
+.work-card-content {
+  padding: 1.5rem 1.7rem 1.2rem 1.7rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.work-card-header-alt {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.work-card-title-alt {
+  color: #18181b;
+  font-size: 1.18rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+.work-card-date-alt {
+  color: #a78bfa;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.work-card-company-alt {
+  color: #6366f1;
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+.work-card-description-alt {
+  color: #52525b;
+  font-size: 1rem;
+  margin-top: 0.2rem;
+  padding-left: 1.1rem;
+  list-style: disc;
+  line-height: 1.7;
+}
+@media (max-width: 600px) {
+  .work-section-alt {
+    padding: 1.2rem 0.2rem 0 0.2rem;
+  }
+  .work-card-content {
+    padding: 1rem 0.7rem 0.8rem 0.7rem;
+  }
+  .work-list-alt {
+    gap: 1.2rem;
+  }
 }
 </style>
