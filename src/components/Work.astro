@@ -13,111 +13,125 @@ const jobs = [
 ];
 ---
 
-<section class="work-section-alt">
-  <div class="work-list-alt">
-    {
-      jobs.map((job) => (
-        <div class="work-card-alt">
-          <div class="work-card-side"></div>
-          <div class="work-card-content">
-            <div class="work-card-header-alt">
-              <span class="work-card-title-alt">{job.title}</span>
-              <span class="work-card-date-alt">{job.date}</span>
-            </div>
-            <div class="work-card-company-alt">{job.company}</div>
-            <ul class="work-card-description-alt">
-              {job.description.map(line => (
-                <li>{line}</li>
-              ))}
-            </ul>
+<section class="work-experience-alt">
+  <div class="work-experience-cards">
+    {jobs.map((job) => (
+      <div class="work-card">
+        <div class="work-card-header">
+          <div class="work-card-icon">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <circle cx="18" cy="18" r="18" fill="#6366f1" />
+              <path d="M12 24V16.5C12 15.1193 13.1193 14 14.5 14H21.5C22.8807 14 24 15.1193 24 16.5V24" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+              <rect x="15" y="18" width="6" height="6" rx="1" fill="#fff"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="work-card-role">{job.title}</h3>
+            <span class="work-card-company">{job.company}</span>
           </div>
         </div>
-      ))
-    }
+        <div class="work-card-body">
+          <span class="work-card-date">{job.date}</span>
+          <ul class="work-card-desc">
+            {job.description.map(line => (
+              <li>{line}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    ))}
   </div>
 </section>
 
 <style>
-.work-section-alt {
-  max-width: 700px;
+.work-experience-alt {
+  max-width: 900px;
   margin: 0 auto;
-  padding: 2.5rem 1.5rem 0 1.5rem;
+  padding: 3rem 1.5rem 0 1.5rem;
 }
-.work-title {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #6366f1;
-  margin-bottom: 2rem;
-  text-align: center;
-  letter-spacing: 0.02em;
+.work-experience-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.2rem;
 }
-.work-list-alt {
+.work-card {
+  background: linear-gradient(135deg, #3c1e81 0%, #4b307e 60%, #1e1b4b 100%);
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 24px 0 #6366f122;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-}
-.work-card-alt {
-  display: flex;
-  background: #ffffff;
-  border-radius: 1rem;
-  box-shadow: 0 4px 24px 0 #6366f122;
+  transition: box-shadow 0.2s, transform 0.2s, border 0.2s;
+  border: 1.5px solid #6d28d9;
+  position: relative;
   overflow: hidden;
-  border-left: 8px solid #6366f1;
-  transition: box-shadow 0.2s;
 }
-.work-card-alt:hover {
-  box-shadow: 0 8px 32px 0 #6366f144;
+.work-card:hover {
+  box-shadow: 0 8px 36px 0 #7c3aed55;
+  transform: translateY(-6px) scale(1.025);
+  border: 2px solid #7c3aed;
 }
-.work-card-side {
-  width: 8px;
-  background: linear-gradient(180deg, #6366f1 0%, #a78bfa 100%);
+.work-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+  z-index: 1;
 }
-.work-card-content {
-  padding: 1.5rem 1.7rem 1.2rem 1.7rem;
-  flex: 1;
+.work-card-icon {
+  background: #18181b;
+  border-radius: 50%;
+  padding: 0.4rem;
+  box-shadow: 0 2px 8px 0 #a78bfa33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #a78bfa;
+}
+.work-card-role {
+  color: #fff;
+  font-size: 1.22rem;
+  font-weight: 700;
+  margin: 0 0 0.2rem 0;
+  letter-spacing: 0.01em;
+}
+.work-card-company {
+  color: #c4b5fd;
+  font-size: 1.08rem;
+  font-weight: 700;
+}
+.work-card-body {
   display: flex;
   flex-direction: column;
   gap: 0.7rem;
+  position: relative;
+  z-index: 1;
 }
-.work-card-header-alt {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-.work-card-title-alt {
-  color: #18181b;
-  font-size: 1.18rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-}
-.work-card-date-alt {
+.work-card-date {
   color: #a78bfa;
-  font-size: 1rem;
-  font-weight: 500;
-}
-.work-card-company-alt {
-  color: #6366f1;
-  font-size: 1.08rem;
+  font-size: 1.02rem;
   font-weight: 600;
   margin-bottom: 0.2rem;
 }
-.work-card-description-alt {
-  color: #52525b;
+.work-card-desc {
+  color: #ede9fe;
   font-size: 1rem;
-  margin-top: 0.2rem;
   padding-left: 1.1rem;
   list-style: disc;
   line-height: 1.7;
+  margin: 0;
 }
-@media (max-width: 600px) {
-  .work-section-alt {
-    padding: 1.2rem 0.2rem 0 0.2rem;
+@media (max-width: 700px) {
+  .work-experience-alt {
+    padding: 1.5rem 0.5rem 0 0.5rem;
   }
-  .work-card-content {
-    padding: 1rem 0.7rem 0.8rem 0.7rem;
-  }
-  .work-list-alt {
+  .work-experience-cards {
+    grid-template-columns: 1fr;
     gap: 1.2rem;
+  }
+  .work-card {
+    padding: 1.2rem 1rem;
   }
 }
 </style>
