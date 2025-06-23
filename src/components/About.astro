@@ -10,18 +10,18 @@ const softSkills = [
     { name: "Critical Thinking", percentage: 70 }
 ];
 const hardSkills = [
-    { name: "C#", icon: "/assets/icons/CSharp.svg", percentage: 80 },
-    { name: "Python", icon: "/assets/icons/Python.svg", percentage: 70 },
-    { name: "Java", icon: "/assets/icons/Java.svg", percentage: 75 },
-    { name: "Kotlin", icon: "/assets/icons/Kotlin.svg", percentage: 75 },
-    { name: "JavaScript", icon: "/assets/icons/JavaScript.svg", percentage: 70 },
-    { name: "Unity", icon: "/assets/icons/Unity.svg", percentage: 80 },
-    { name: "Astro", icon: "/assets/icons/Astro.svg", percentage: 70 },
-    { name: "TailwindCSS", icon: "/assets/icons/TailwindCSS.svg", percentage: 65 },
-    { name: "Spring", icon: "/assets/icons/Spring.svg", percentage: 70 },
-    { name: "Django", icon: "/assets/icons/Django.svg", percentage: 65 },
-    { name: "MySQL", icon: "/assets/icons/MySQL.svg", percentage: 80 },
-    { name: "PostgreSQL", icon: "/assets/icons/PostgreSQL.svg", percentage: 70 },
+    { name: "C#", icon: "/assets/icons/CSharp.svg"},
+    { name: "Python", icon: "/assets/icons/Python.svg"},
+    { name: "Java", icon: "/assets/icons/Java.svg"},
+    { name: "Kotlin", icon: "/assets/icons/Kotlin.svg"},
+    { name: "JavaScript", icon: "/assets/icons/JavaScript.svg"},
+    { name: "Unity", icon: "/assets/icons/Unity.svg"},
+    { name: "Astro", icon: "/assets/icons/Astro.svg"},
+    { name: "TailwindCSS", icon: "/assets/icons/TailwindCSS.svg"},
+    { name: "Spring", icon: "/assets/icons/Spring.svg"},
+    { name: "Django", icon: "/assets/icons/Django.svg"},
+    { name: "MySQL", icon: "/assets/icons/MySQL.svg"},
+    { name: "PostgreSQL", icon: "/assets/icons/PostgreSQL.svg"},
 ];
 ---
 
@@ -82,10 +82,6 @@ const hardSkills = [
                     <div class="flex flex-col items-center bg-gradient-to-br from-violet-900 to-gray-900 rounded-2xl p-6 shadow-md border-2 border-gray-800/40">
                         <img src={skill.icon} alt={`${skill.name} icon`} class="w-10 h-10 mb-2" loading="lazy"/>
                         <span class="text-lg font-bold text-white mb-1">{skill.name}</span>
-                        <div class="w-full h-2 bg-gray-700 rounded-full overflow-hidden mb-2">
-                            <div class="h-full bg-green-400 rounded-full" style={{ width: `${skill.percentage}%` }}></div>
-                        </div>
-                        <span class="text-sm font-semibold text-green-300">{skill.percentage}%</span>
                     </div>
                 ))}
             </div>
