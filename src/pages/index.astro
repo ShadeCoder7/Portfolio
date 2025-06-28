@@ -93,16 +93,22 @@ import Work from "../components/Work.astro";
       />
       {/* Open to Work badge */}
       <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex items-center justify-center z-20">
-      <span
-        class="flex items-center gap-2 px-4 py-1 rounded-full text-xs font-bold shadow-md border-2 border-white bg-gradient-to-r from-violet-400 to-violet-700 text-white animate-gradient-x group-hover:scale-105 transition-transform duration-500"
-        style="box-shadow: 0 4px 16px 0 rgba(139,92,246,0.18);"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <span
+          class="flex items-center gap-2 px-4 py-1 rounded-full text-xs font-bold shadow-md border-2 border-white bg-gradient-to-r from-violet-400 to-violet-700 text-white animate-gradient-x group-hover:scale-105 transition-transform duration-500"
+          style="box-shadow: 0 4px 16px 0 rgba(139,92,246,0.18);"
+        >
+          <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-7 w-7 md:h-5 md:w-5 text-white transition-all duration-300"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+          >
         <circle cx="12" cy="12" r="10" fill="#7c3aed"></circle>
-        <path stroke="#fff" stroke-width="2" d="M8 12l2 2 4-4"></path>
-        </svg>
-        Open to Work
-      </span>
+        <path stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" d="M8 12l2.5 2.5L16 9" />
+          </svg>
+          Open to Work
+        </span>
       </div>
       </div>
       </div>
